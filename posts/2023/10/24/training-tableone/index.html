@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy Europe | Galaxy 中国镜像</title>
-  <meta property="og:title" content="Galaxy 中国镜像" />
-  <meta property="og:description" content="Galaxy 中国镜像是 Galaxy 云计算平台的一个中国实例。平台具有以下特点：
-
-  大量在线工具免费使用
-..." />
+  <title>Galaxy Europe | Galaxy云平台|如何制作临床信息表/三线表/Table 1</title>
+  <meta property="og:title" content="Galaxy云平台|如何制作临床信息表/三线表/Table 1" />
+  <meta property="og:description" content="临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通..." />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
   <meta name="description" content="The European Galaxy Instance">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +16,7 @@
 
 
 
-  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/21/usegalaxy-cn/">
+  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy Europe" href="/feed.xml">
 
@@ -150,20 +147,16 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/10/20/about-galaxy/">
+    <a class="col-xs-1 text-center" href="/posts/2023/10/21/usegalaxy-cn/">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">Galaxy 中国镜像</h2>
+        <h2 class="title">Galaxy云平台|如何制作临床信息表/三线表/Table 1</h2>
       </div>
       <hr />
     </div>
-    
-    <a class="col-xs-1 text-center" href="/posts/2023/10/24/training-tableone/">
-      »
-    </a>
     
   </div>
   <div class="row post-metadata">
@@ -176,7 +169,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Oct 21, 2023
+              Oct 24, 2023
             </span>
 
             
@@ -200,15 +193,135 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="news-content">
-        <p>Galaxy 中国镜像是 Galaxy 云计算平台的一个中国实例。平台具有以下特点：</p>
+        <p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
+
+<p>本文介绍通过Galaxy云平台<a href="usegalaxy.cn">usegalaxy.cn</a>制作临床基线表/三线表的方法。</p>
+
+<h2 id="1-数据准备">1. 数据准备</h2>
+
+<p>要制作临床基线表/三线表，首先要将临床信息整理成表格：</p>
+
 <ul>
-  <li>大量在线工具免费使用</li>
-  <li>无需安装，用完即走</li>
-  <li>活跃的用户社区</li>
-  <li>按需培训的能力</li>
+  <li>
+    <p>每一行是一个样本；</p>
+  </li>
+  <li>
+    <p>每一列是一个变量。</p>
+  </li>
 </ul>
 
-<p>开始使用：<a href="usegalaxy.cn">usegalaxy.cn</a></p>
+<p>比如：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-tableone-pbc.png" alt="示例数据" /></p>
+
+<p>本文将以平台自带的一个测试数据集（tableone_pbc.tsv）为例进行演示。</p>
+
+<h2 id="2-galaxy平台操作步骤">2. Galaxy平台操作步骤</h2>
+
+<h3 id="21-选择工具">2.1 选择工具</h3>
+
+<ul>
+  <li>进入Galaxy云平台：<a href="usegalaxy.cn">usegalaxy.cn</a>（建议使用Chrome或Firefox浏览器）。</li>
+</ul>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-home.png" alt="Galaxy云平台" /></p>
+
+<ul>
+  <li>主页左侧工具列表中，找到 Statistics &gt; 临床基线表，点击进入工具界面。</li>
+</ul>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-home-tableone.png" alt="" /></p>
+
+<h3 id="22-选择测试数据集">2.2 选择测试数据集</h3>
+
+<p>点击输入数据最右边按钮 Browse datasets &gt; Data libraries &gt; Table data &gt; tableone_pbc.tsv，如图：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-click1-browse-datasets.png" alt="" />
+<img src="usegalaxy.github.io/assets/img/20231024-galaxy-click2-browse-datasets.png" alt="" />
+<img src="usegalaxy.github.io/assets/img/20231024-galaxy-click3-browse-datasets.png" alt="" />
+<img src="usegalaxy.github.io/assets/img/20231024-galaxy-click4-browse-datasets.png" alt="" /></p>
+
+<h3 id="23-运行工具">2.3 运行工具</h3>
+
+<p>完成数据集的选择后，我们保持其他参数设定框为空，以默认参数运行工具：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-tableone-run-tool.png" alt="" />
+<img src="usegalaxy.github.io/assets/img/20231024-galaxy-submit-done.png" alt="" />
+<img src="usegalaxy.github.io/assets/img/20231024-galaxy-run-tool-done.png" alt="" /></p>
+
+<h3 id="23-查看结果">2.3 查看结果</h3>
+
+<p>点击眼睛图标，查看计算结果：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-check-result.png" alt="" /></p>
+
+<p>结果展示：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-show-result.png" alt="" /></p>
+
+<h3 id="24-下载结果">2.4 下载结果</h3>
+
+<p>点击显示数据详情：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-click-datasets.png" alt="" /></p>
+
+<p>点击磁盘图标下载结果文件：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-download.png" alt="" /></p>
+
+<p>结果是一个文本文件，可以用文本编辑器或者Excel打开：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-result-table.png" alt="" /></p>
+
+<h2 id="3-调整参数重新计算">3. 调整参数重新计算</h2>
+
+<p>在Galaxy平台上重新调整参数再次运行工具是非常方便的，只需要点击界面中的“重运行”按钮：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-rerun.png" alt="" /></p>
+
+<p>可以看到，界面中出现了刚才运行任务时的参数设置，也就是说，当重新运行任务时，上一次运行的参数得到了保留，我们只需要进行必要的修改，即可再次运行工具。</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-rerun-ui.png" alt="" /></p>
+
+<p>进行必要的修改，如：</p>
+
+<ul>
+  <li>指定一个分类变量：sex</li>
+  <li>指定两个符合正态分布的变量：trig, platelet（仅仅是用于举例，实际要依变量的性质而定）</li>
+  <li>指定两个不符合正态分布的变量：time, age（仅仅是用于举例，实际要依变量的性质而定）</li>
+  <li>指定两个分类变量：status, trt。当分类变量以数值表示时，必须明确指定其为分类变量，否则会自动按数值变量处理。</li>
+</ul>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-rerun-ui-setting.png" alt="" /></p>
+
+<p>再次点击 Run Tool 运行，查看结果：</p>
+
+<p><img src="usegalaxy.github.io/assets/img/20231024-galaxy-rerun-result.png" alt="" /></p>
+
+<p>可以看到：</p>
+
+<ul>
+  <li>对于符合正态分布的变量，计算了平均数和标准差：mean(SD)</li>
+  <li>对于不符合正态分布的变量，计算了中位数和上下四分位数：median(IQR)</li>
+  <li>对于分类变量，计算了它们的数量及其中总数中的百分比（%），以数值表示的分类变量得到了正确的处理</li>
+</ul>
+
+<p>此外，表中还展示了 p 值 ，关于检验方法：</p>
+
+<ul>
+  <li>正态分布的数据，进行了参数检验</li>
+  <li>不符合正态分布的数据，进行了非参数检验</li>
+  <li>分类数据，进行了Fisher精确检验</li>
+</ul>
+
+<p>限于篇幅，本文就介绍到这里，更多生信工具，请到Galaxy中国(usegalaxy.cn)网站进行探索。</p>
+
+<h2 id="3-最后">3. 最后</h2>
+
+<p>生信分析已经进入2.0时代，即云平台时代。</p>
+
+<p>Galaxy中国站致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>
+
 
       </div>
     </div>
@@ -250,7 +363,7 @@ unless otherwise specified.</p>
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-21-usegalaxy-cn.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-24-training-tableone.md">Edit this page on GitHub</a></li> -->
                     
                       <li><i class="fa fa-envelope"></i><a href="mailto:contact@usegalaxy.eu">contact@usegalaxy.eu</a></li>
                     

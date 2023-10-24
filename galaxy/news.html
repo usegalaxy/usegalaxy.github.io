@@ -61,6 +61,72 @@
               <div class="row" style="padding: 1em">
                 <div>
                   
+                    <a href="/posts/2023/10/24/training-tableone/plain.html">
+                  
+                    <h2 class="title">Galaxy云平台|如何制作临床信息表/三线表/Table 1</h2>
+                  </a>
+                  <span class="date">
+                    
+
+
+
+	<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+
+
+
+
+
+
+
+
+
+                  </span>
+                  <span class="date">
+                    October 24, 2023
+                  </span>
+                  
+                  <a href="javascript:window.location.href=window.location.href.split('?')[0] + '?tag=Freiburg'"
+                  class="btn btn-success btn-xs tag-element" role="button">Freiburg</a>
+                  
+                  
+    
+        <a href="javascript:window.location.href=window.location.href.split('?')[0] + '?tag=training'"
+           class="btn btn-primary btn-xs tag-element" role="button">training</a>
+    
+
+
+                </div>
+                <div class="news-content">
+                  <div><p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
+</div>
+                </div>
+              </div>
+            </div>
+            ${counter === 3 ? '</div>' : ''}
+            `
+        if (counter === 3) {
+          counter = 0
+        }
+
+        news.append(div);
+    }
+    tags = []
+
+
+     
+      tags.push(`training`)
+     
+      tags.push(`Freiburg`)
+
+    if (!userTag ? true : tags.includes(userTag)) {
+      counter++
+
+      div = `
+            ${counter === 3 ? '<div class="row">' : ''}
+            <div class="col-md-4 training news ">
+              <div class="row" style="padding: 1em">
+                <div>
+                  
                     <a href="/posts/2023/10/21/usegalaxy-cn/plain.html">
                   
                     <h2 class="title">Galaxy 中国镜像</h2>
