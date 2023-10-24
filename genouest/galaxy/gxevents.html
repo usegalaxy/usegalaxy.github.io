@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Galaxy Europe</title>
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
+  <meta name="description" content="The European Galaxy Instance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+
+  <link rel="canonical" href="http://0.0.0.0:8090/genouest/galaxy/gxevents.html">
+  <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="Galaxy Europe" href="/feed.xml">
+
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="/assets/js/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <div class="container" id="maincontainer">
+          
+
+
+
+
+<section class="page-header">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      
+      <h1>GenOuest Events</h1>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  const load = () => {
+    let recent = $("#recent-events");
+    let passed = $("#passed-events");
+    let div;
+    let date;
+    let today = new Date();
+    // ignore time (at least for now)
+    today.setHours(0,0,0,0)
+    const createDiv = ()=>{
+
+    }
+    
+        if (new Date(`11 Oct 2023`) <= today) {
+            div = `
+                <tr class="">
+  
+  <td>
+    <h4>
+      
+        <a href="https://biohackathon-europe.org/" target="_blank" rel="noopener">
+      
+      ELIXIR BioHackathon Europe
+      </a>
+      <span>
+	<i class="fa fa-external-link" aria-hidden="true"></i>
+
+
+
+
+
+
+
+
+
+
+
+</span>
+    </h4>
+    <div><p>BioHackathon activities are driven by practical sessions where people gather, discuss, and implement ideas and projects during intensive and productive coding sessions</p>
+</div>
+  </td>
+  <td>
+  <span class="text-nowrap">Oct 7, 2023</span>
+  </td>
+  <td>
+  <span class="text-nowrap">Oct 11, 2023</span>
+  </td>
+  <td>
+    
+    
+  </td>
+</tr>
+            `
+            passed.append(div)
+          }
+    
+
+    
+          if (new Date(`11 Oct 2023`) >= today) {
+            div = `
+                <tr class="">
+  
+  <td>
+    <h4>
+      
+        <a href="https://biohackathon-europe.org/" target="_blank" rel="noopener">
+      
+      ELIXIR BioHackathon Europe
+      </a>
+      <span>
+	<i class="fa fa-external-link" aria-hidden="true"></i>
+
+
+
+
+
+
+
+
+
+
+
+</span>
+    </h4>
+    <div><p>BioHackathon activities are driven by practical sessions where people gather, discuss, and implement ideas and projects during intensive and productive coding sessions</p>
+</div>
+  </td>
+  <td>
+  <span class="text-nowrap">Oct 7, 2023</span>
+  </td>
+  <td>
+  <span class="text-nowrap">Oct 11, 2023</span>
+  </td>
+  <td>
+    
+    
+  </td>
+</tr>
+            `
+            recent.append(div)
+          }
+    
+  }
+  window.onload = load;
+</script>
+
+
+
+
+
+
+<h2 class="text-center"><span class="label label-success">Current & Upcoming</span></h2>
+
+<section class="section-content">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead
+              
+              class="list-group-item-success"
+              
+      >
+        <tr>
+          
+          <th>Topic/Event</th>
+          <th>Starts</th>
+          <th>Ends</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody
+              
+              id="recent-events">
+              
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+<h2 class="text-center"><span class="label label-warning">Past</span></h2>
+
+<section class="section-content">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead
+              
+              class="list-group-item-warning"
+              
+      >
+        <tr>
+          
+          <th>Topic/Event</th>
+          <th>Starts</th>
+          <th>Ends</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody
+              
+              id="passed-events">
+              
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+<footer class="navbar-default">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <!--
+ -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <ul class="contact-info">
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/genouest/galaxy/gxevents.md">Edit this page on GitHub</a></li> -->
+                    
+                      <li><i class="fa fa-envelope"></i><a href="mailto:support@genouest.org">support@genouest.org</a></li>
+                    
+                    <!--
+                    
+                      <li><i class="fa fa-github"></i><a href="https://github.com/genouest">genouest</a></li>
+                    
+                    
+                      <li><i class="fa fa-twitter"></i><a href="https://twitter.com/GenOuest">GenOuest</a></li>
+                    
+                      <li><i class="fa fa-rss"></i>Subscribe <a href="/feed.xml">via RSS (UseGalaxy.eu Feed)</a></li>
+                    -->
+
+                    <div class="image-link">
+						<li><i class="fa fa-wechat"></i><a href="#">简说基因</a></li>
+						<div class="image-container">
+							<p>Galaxy平台最新消息，关注公众号：简说基因</p> <!-- 添加描述文字 -->
+							<img src="/assets/media/wechat-official.jpg" alt="图片描述">
+						 </div>
+					</div>
+
+					<div class="image-link">
+					    <li><i class="fa fa-qq"></i><a href="#">Galaxy中国交流群</a></li>
+					    <div class="image-container">
+						    <p>欢迎加入Galaxy中国交流群，群号：925694514</p> <!-- 添加描述文字 -->
+						    <img src="/assets/media/qq-group.jpg" alt="图片描述">
+					    </div>
+					</div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script async defer data-domain="galaxyproject.eu" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+  </body>
+</html>
