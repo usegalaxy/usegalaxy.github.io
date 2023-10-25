@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:8090/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8090/" rel="alternate" type="text/html" /><updated>2023-10-24T09:19:53+00:00</updated><id>http://0.0.0.0:8090/feed.xml</id><title type="html">Galaxy Europe</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">Galaxy云平台|如何制作临床信息表/三线表/Table 1</title><link href="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/" rel="alternate" type="text/html" title="Galaxy云平台|如何制作临床信息表/三线表/Table 1" /><published>2023-10-24T00:00:00+00:00</published><updated>2023-10-24T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/24/training-tableone</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/"><![CDATA[<p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:8090/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8090/" rel="alternate" type="text/html" /><updated>2023-10-25T14:30:19+00:00</updated><id>http://0.0.0.0:8090/feed.xml</id><title type="html">Galaxy Europe</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</title><link href="http://0.0.0.0:8090/posts/2023/10/25/tools-maftools/" rel="alternate" type="text/html" title="Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件" /><published>2023-10-25T00:00:00+00:00</published><updated>2023-10-25T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/25/tools-maftools</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/25/tools-maftools/"><![CDATA[<p>2023-10-25，Galaxy中国镜像站 <a href="usegalaxy.cn">UseGalaxy.cn</a> 平台新增 5 个工具。</p>
+
+<h2 id="maf-tools">MAF Tools</h2>
+
+<ul>
+  <li>Maftools-突变景观图: 绘制肿瘤基因突变景观图</li>
+  <li>Maftools-突变汇总: 汇总MAF文件中的突变信息</li>
+  <li>Maftools-共突变与互斥突变: 计算共突变和互斥突变</li>
+  <li>Maftools-队列比较：比较两个队列之间基因突变的差异</li>
+  <li>Maftools-突变过滤: 一键过滤同义突变</li>
+</ul>
+
+<h2 id="部分结果展示">部分结果展示</h2>
+
+<h3 id="maftools-突变景观图">Maftools-突变景观图</h3>
+
+<p><img src="/assets/img/231025-galaxy-maftools-oncoplot.png" alt="" /></p>
+
+<p>肿瘤突变景观图是一种用于展示肿瘤样本中基因突变信息的图表。横坐标代表不同肿瘤样本，可以是来自不同患者的样本或同一患者不同时间点的样本。纵坐标通常表示不同的基因或基因组区域，其中可能包括与肿瘤发生和发展相关的关键基因。</p>
+
+<h3 id="maftools-突变汇总">Maftools-突变汇总</h3>
+
+<p><img src="/assets/img/231025-galaxy-maftools-summary.png" alt="" /></p>
+
+<p>计算 MAF 文件的摘要，该摘要以堆叠条形图的形式展示每个样本中突变的数量，并按 Variant_Classification 将汇总的变异类型显示为箱线图。</p>
+
+<h3 id="maftools-共突变与互斥突变">Maftools-共突变与互斥突变</h3>
+
+<p><img src="/assets/img/231025-galaxy-maftools-somaticInteraction.png" alt="" /></p>
+
+<p>肿瘤基因的共突变和互斥突变是研究肿瘤遗传学时经常遇到的概念。</p>
+
+<p><strong>共突变（Co-occurring Mutations）：</strong>指两个或多个基因在同一肿瘤样本中同时发生突变。共突变可能是因为这些基因在同一通路或功能网络中相互作用，共同参与了肿瘤的发展过程。共突变的分析可以帮助我们理解肿瘤发展的关键途径，找到潜在的靶向治疗机会。</p>
+
+<p><strong>互斥突变（Mutually Exclusive Mutations）：</strong>指两个或多个基因突变在同一肿瘤样本中不会同时出现。这表明这些基因可能在肿瘤的发展中具有相似的功能或通路，突变发生在其中一个基因的同时抑制了其他基因的突变。互斥突变的分析有助于识别肿瘤发展过程中相互竞争的关键基因，并为潜在的治疗靶点提供线索。
+通过研究共突变和互斥突变，我们可以深入了解肿瘤细胞内复杂的遗传变异模式，识别肿瘤发展过程中的关键基因和通路，为精准医疗和个体化治疗提供重要的理论支持。</p>
+
+<h3 id="maftools-队列比较">Maftools-队列比较</h3>
+
+<p><img src="/assets/img/231025-galaxy-maftools-compare-cohort.png" alt="" /></p>
+
+<p>癌症在突变模式方面存在差异。我们可以比较两个不同的队列来检测这种不同的突变基因。例如，Madan等人最近的一篇文章表明，复发性急性早幼粒细胞白血病（APL）患者往往在PML和RARA基因中具有突变，在疾病的初期阶段则不存在这些突变。可以使用mafCompare函数检测两个队列（在本例中为初期和复发性APL）之间的差异，该函数对两个队列中的所有基因执行Fisher检验以检测不同的突变基因。</p>
+
+<h3 id="maftools-突变过滤">Maftools-突变过滤</h3>
+
+<p>将 MAF 文件拆分成两个文件：一个包含同义突变，另一个包含非同义突变。</p>
+
+<p><img src="/assets/img/231025-galaxy-maftools-filter-non-silent.png" alt="" /></p>
+
+<p><img src="/assets/img/231025-galaxy-maftools-filter-silent.png" alt="" /></p>
+
+<p><strong>非同义突变类型：</strong></p>
+
+<p>“Frame_Shift_Del”, “Frame_Shift_Ins”, “Splice_Site”, “Translation_Start_Site”,”Nonsense_Mutation”, “Nonstop_Mutation”, “In_Frame_Del”,”In_Frame_Ins”, “Missense_Mutation”</p>
+
+<p>这些突变具有高度或中等的突变后果。</p>
+
+<h2 id="最后">最后</h2>
+
+<p>生信分析已经进入2.0时代，即云平台时代。</p>
+
+<p>Galaxy生信云平台 <a href="usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-10-25，Galaxy中国镜像站 UseGalaxy.cn 平台新增 5 个工具。]]></summary></entry><entry><title type="html">Galaxy云平台|如何制作临床信息表/三线表/Table 1</title><link href="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/" rel="alternate" type="text/html" title="Galaxy云平台|如何制作临床信息表/三线表/Table 1" /><published>2023-10-24T00:00:00+00:00</published><updated>2023-10-24T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/24/training-tableone</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/"><![CDATA[<p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
 
 <p>本文介绍通过 Galaxy生信云平台 <a href="usegalaxy.cn">usegalaxy.cn</a> 制作临床基线表/三线表的方法。</p>
 
