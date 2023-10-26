@@ -160,9 +160,75 @@
               <div class="row" style="padding: 1em">
                 <div>
                   
-                    <a href="/posts/2023/10/25/tools-maftools/">
+                    <a href="/posts/2023/10/26/tool-update/">
                   
-                    <h2 class="title">Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</h2>
+                    <h2 class="title">Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具</h2>
+                  </a>
+                  <span class="date">
+                    
+
+
+
+
+
+	<i class="fa fa-wrench" aria-hidden="true"></i>
+
+
+
+
+
+
+
+                  </span>
+                  <span class="date">
+                    October 26, 2023
+                  </span>
+                  
+                  <a href="javascript:window.location.href=window.location.href.split('?')[0] + '?tag=Freiburg'"
+                  class="btn btn-success btn-xs tag-element" role="button">Freiburg</a>
+                  
+                  
+    
+        <a href="javascript:window.location.href=window.location.href.split('?')[0] + '?tag=tools'"
+           class="btn btn-primary btn-xs tag-element" role="button">tools</a>
+    
+
+
+                </div>
+                <div class="news-content">
+                  <div><p>2023-10-26，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 2 个工具。</p>
+</div>
+                </div>
+              </div>
+            </div>
+            ${counter === 3 ? '</div>' : ''}
+            `
+        if (counter === 3) {
+          counter = 0
+        }
+
+        news.append(div);
+    }
+    tags = []
+
+
+     
+      tags.push(`tools`)
+     
+      tags.push(`Freiburg`)
+
+    if (!userTag ? true : tags.includes(userTag)) {
+      counter++
+
+      div = `
+            ${counter === 3 ? '<div class="row">' : ''}
+            <div class="col-md-4 tools news ">
+              <div class="row" style="padding: 1em">
+                <div>
+                  
+                    <a href="/posts/2023/10/25/tool-update/">
+                  
+                    <h2 class="title">Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</h2>
                   </a>
                   <span class="date">
                     
@@ -226,9 +292,9 @@
               <div class="row" style="padding: 1em">
                 <div>
                   
-                    <a href="/posts/2023/10/24/training-tableone/">
+                    <a href="/posts/2023/10/24/tool-update/">
                   
-                    <h2 class="title">Galaxy云平台|如何制作临床信息表/三线表/Table 1</h2>
+                    <h2 class="title">Galaxy生信云|如何制作临床信息表/三线表/Table 1</h2>
                   </a>
                   <span class="date">
                     

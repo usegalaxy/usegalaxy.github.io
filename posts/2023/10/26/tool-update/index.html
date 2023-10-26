@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy Europe | Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</title>
-  <meta property="og:title" content="Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件" />
-  <meta property="og:description" content="2023-10-25，Galaxy中国镜像站 UseGalaxy.cn 平台新增 5 个工具。
+  <title>Galaxy Europe | Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具</title>
+  <meta property="og:title" content="Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具" />
+  <meta property="og:description" content="2023-10-26，Galaxy生信云平台 UseGalaxy.cn 新增 2 个工具。
 " />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
   <meta name="description" content="The European Galaxy Instance">
@@ -17,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/25/tools-maftools/">
+  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/26/tool-update/">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy Europe" href="/feed.xml">
 
@@ -148,13 +148,13 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/10/24/training-tableone/">
+    <a class="col-xs-1 text-center" href="/posts/2023/10/25/tool-update/">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</h2>
+        <h2 class="title">Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具</h2>
       </div>
       <hr />
     </div>
@@ -170,7 +170,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Oct 25, 2023
+              Oct 26, 2023
             </span>
 
             
@@ -194,66 +194,74 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="news-content">
-        <p>2023-10-25，Galaxy中国镜像站 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 平台新增 5 个工具。</p>
+        <p>2023-10-26，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 2 个工具。</p>
 
-<h2 id="maf-tools">MAF Tools</h2>
+<h2 id="cancer-research">Cancer Research</h2>
 
 <ul>
-  <li>Maftools-突变景观图: 绘制肿瘤基因突变景观图</li>
-  <li>Maftools-突变汇总: 汇总MAF文件中的突变信息</li>
-  <li>Maftools-共突变与互斥突变: 计算共突变和互斥突变</li>
-  <li>Maftools-队列比较：比较两个队列之间基因突变的差异</li>
-  <li>Maftools-突变过滤: 一键过滤同义突变</li>
+  <li>生存曲线 Kaplan-Meier curve ploter</li>
+  <li>肿瘤通路注释 Gene to oncogenic pathway mapper</li>
 </ul>
 
 <h2 id="部分结果展示">部分结果展示</h2>
 
-<h3 id="maftools-突变景观图">Maftools-突变景观图</h3>
+<h3 id="生存曲线-kaplan-meier-curve-ploter">生存曲线 Kaplan-Meier curve ploter</h3>
 
-<p><img src="/assets/img/231025-galaxy-maftools-oncoplot.png" alt="" /></p>
+<p>生存曲线-不分层：</p>
 
-<p>肿瘤突变景观图是一种用于展示肿瘤样本中基因突变信息的图表。横坐标代表不同肿瘤样本，可以是来自不同患者的样本或同一患者不同时间点的样本。纵坐标通常表示不同的基因或基因组区域，其中可能包括与肿瘤发生和发展相关的关键基因。</p>
+<p><img src="/assets/img/231026-tool-update-survival.png" alt="" /></p>
 
-<h3 id="maftools-突变汇总">Maftools-突变汇总</h3>
+<p>生存曲线-分层：</p>
 
-<p><img src="/assets/img/231025-galaxy-maftools-summary.png" alt="" /></p>
+<p><img src="/assets/img/231026-tool-update-survival-strata.png" alt="" /></p>
 
-<p>计算 MAF 文件的摘要，该摘要以堆叠条形图的形式展示每个样本中突变的数量，并按 Variant_Classification 将汇总的变异类型显示为箱线图。</p>
+<p>生存分析是一种统计方法，用于评估特定群体在一段特定时间内存活或生存的概率。它通常用于研究患者的生存率或存活时间，特别是在临床医学和流行病学研究中。生存分析主要涉及观察患者或个体在一定时间内是否存活，并在研究过程中考虑各种可能的因素，如治疗方法、药物治疗、生活方式等。</p>
 
-<h3 id="maftools-共突变与互斥突变">Maftools-共突变与互斥突变</h3>
+<h3 id="肿瘤通路注释-gene-to-oncogenic-pathway-mapper">肿瘤通路注释 Gene to oncogenic pathway mapper</h3>
 
-<p><img src="/assets/img/231025-galaxy-maftools-somaticInteraction.png" alt="" /></p>
+<p>指定基因所在的列，本工具可以将基因名转换成通路名（TCGA 10 条oncogenic通路和 TCGA 10 条DDR通路）。</p>
 
-<p>肿瘤基因的共突变和互斥突变是研究肿瘤遗传学时经常遇到的概念。</p>
+<p>注释前：</p>
 
-<p><strong>共突变（Co-occurring Mutations）：</strong>指两个或多个基因在同一肿瘤样本中同时发生突变。共突变可能是因为这些基因在同一通路或功能网络中相互作用，共同参与了肿瘤的发展过程。共突变的分析可以帮助我们理解肿瘤发展的关键途径，找到潜在的靶向治疗机会。</p>
+<p><img src="/assets/img/231026-tool-update-gene2pathway-before.png" alt="" /></p>
 
-<p><strong>互斥突变（Mutually Exclusive Mutations）：</strong>指两个或多个基因突变在同一肿瘤样本中不会同时出现。这表明这些基因可能在肿瘤的发展中具有相似的功能或通路，突变发生在其中一个基因的同时抑制了其他基因的突变。互斥突变的分析有助于识别肿瘤发展过程中相互竞争的关键基因，并为潜在的治疗靶点提供线索。
-通过研究共突变和互斥突变，我们可以深入了解肿瘤细胞内复杂的遗传变异模式，识别肿瘤发展过程中的关键基因和通路，为精准医疗和个体化治疗提供重要的理论支持。</p>
+<p>注释后：</p>
 
-<h3 id="maftools-队列比较">Maftools-队列比较</h3>
+<p><img src="/assets/img/231026-tool-update-gene2pathway-after.png" alt="" /></p>
 
-<p><img src="/assets/img/231025-galaxy-maftools-compare-cohort.png" alt="" /></p>
+<p><strong>TCGA 10 条 oncogenic 通路：</strong></p>
 
-<p>癌症在突变模式方面存在差异。我们可以比较两个不同的队列来检测这种不同的突变基因。例如，Madan等人最近的一篇文章表明，复发性急性早幼粒细胞白血病（APL）患者往往在PML和RARA基因中具有突变，在疾病的初期阶段则不存在这些突变。可以使用mafCompare函数检测两个队列（在本例中为初期和复发性APL）之间的差异，该函数对两个队列中的所有基因执行Fisher检验以检测不同的突变基因。</p>
+<ul>
+  <li>Cell_Cycle</li>
+  <li>Hippo</li>
+  <li>MYC</li>
+  <li>NOTCH</li>
+  <li>NRF2</li>
+  <li>PI3K</li>
+  <li>TGF_Beta</li>
+  <li>RTK_RAS</li>
+  <li>TP53</li>
+  <li>WNT</li>
+</ul>
 
-<h3 id="maftools-突变过滤">Maftools-突变过滤</h3>
+<p><strong>TCGA 10 条 DDR 通路：</strong></p>
 
-<p>将 MAF 文件拆分成两个文件：一个包含同义突变，另一个包含非同义突变。</p>
-
-<p><img src="/assets/img/231025-galaxy-maftools-filter-non-silent.png" alt="" /></p>
-
-<p><img src="/assets/img/231025-galaxy-maftools-filter-silent.png" alt="" /></p>
-
-<p><strong>非同义突变类型：</strong></p>
-
-<p>“Frame_Shift_Del”, “Frame_Shift_Ins”, “Splice_Site”, “Translation_Start_Site”,”Nonsense_Mutation”, “Nonstop_Mutation”, “In_Frame_Del”,”In_Frame_Ins”, “Missense_Mutation”</p>
-
-<p>这些突变具有高度或中等的突变后果。</p>
+<ul>
+  <li>BER</li>
+  <li>DR</li>
+  <li>NHEJ</li>
+  <li>NER</li>
+  <li>MMR</li>
+  <li>HR</li>
+  <li>TLS</li>
+  <li>FA</li>
+  <li>NP</li>
+  <li>Other</li>
+</ul>
 
 <h2 id="最后">最后</h2>
 
-<p>生信分析已经进入2.0时代，即云平台时代。</p>
+<p>谁不想点点鼠标就把活儿干了，早点下班不好吗？</p>
 
 <p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>
 
@@ -297,7 +305,7 @@ unless otherwise specified.</p>
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-25-tools-maftools.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-26-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                       <li><i class="fa fa-envelope"></i><a href="mailto:contact@usegalaxy.eu">contact@usegalaxy.eu</a></li>
                     

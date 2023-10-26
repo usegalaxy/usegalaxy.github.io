@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:8090/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8090/" rel="alternate" type="text/html" /><updated>2023-10-25T15:13:17+00:00</updated><id>http://0.0.0.0:8090/feed.xml</id><title type="html">Galaxy Europe</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</title><link href="http://0.0.0.0:8090/posts/2023/10/25/tools-maftools/" rel="alternate" type="text/html" title="Galaxy生信云平台|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件" /><published>2023-10-25T00:00:00+00:00</published><updated>2023-10-25T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/25/tools-maftools</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/25/tools-maftools/"><![CDATA[<p>2023-10-25，Galaxy中国镜像站 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 平台新增 5 个工具。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://0.0.0.0:8090/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:8090/" rel="alternate" type="text/html" /><updated>2023-10-26T14:05:57+00:00</updated><id>http://0.0.0.0:8090/feed.xml</id><title type="html">Galaxy Europe</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具</title><link href="http://0.0.0.0:8090/posts/2023/10/26/tool-update/" rel="alternate" type="text/html" title="Galaxy生信云|新增生存曲线绘制、肿瘤基因通路注释工具" /><published>2023-10-26T00:00:00+00:00</published><updated>2023-10-26T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/26/tool-update</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/26/tool-update/"><![CDATA[<p>2023-10-26，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 2 个工具。</p>
+
+<h2 id="cancer-research">Cancer Research</h2>
+
+<ul>
+  <li>生存曲线 Kaplan-Meier curve ploter</li>
+  <li>肿瘤通路注释 Gene to oncogenic pathway mapper</li>
+</ul>
+
+<h2 id="部分结果展示">部分结果展示</h2>
+
+<h3 id="生存曲线-kaplan-meier-curve-ploter">生存曲线 Kaplan-Meier curve ploter</h3>
+
+<p>生存曲线-不分层：</p>
+
+<p><img src="/assets/img/231026-tool-update-survival.png" alt="" /></p>
+
+<p>生存曲线-分层：</p>
+
+<p><img src="/assets/img/231026-tool-update-survival-strata.png" alt="" /></p>
+
+<p>生存分析是一种统计方法，用于评估特定群体在一段特定时间内存活或生存的概率。它通常用于研究患者的生存率或存活时间，特别是在临床医学和流行病学研究中。生存分析主要涉及观察患者或个体在一定时间内是否存活，并在研究过程中考虑各种可能的因素，如治疗方法、药物治疗、生活方式等。</p>
+
+<h3 id="肿瘤通路注释-gene-to-oncogenic-pathway-mapper">肿瘤通路注释 Gene to oncogenic pathway mapper</h3>
+
+<p>指定基因所在的列，本工具可以将基因名转换成通路名（TCGA 10 条oncogenic通路和 TCGA 10 条DDR通路）。</p>
+
+<p>注释前：</p>
+
+<p><img src="/assets/img/231026-tool-update-gene2pathway-before.png" alt="" /></p>
+
+<p>注释后：</p>
+
+<p><img src="/assets/img/231026-tool-update-gene2pathway-after.png" alt="" /></p>
+
+<p><strong>TCGA 10 条 oncogenic 通路：</strong></p>
+
+<ul>
+  <li>Cell_Cycle</li>
+  <li>Hippo</li>
+  <li>MYC</li>
+  <li>NOTCH</li>
+  <li>NRF2</li>
+  <li>PI3K</li>
+  <li>TGF_Beta</li>
+  <li>RTK_RAS</li>
+  <li>TP53</li>
+  <li>WNT</li>
+</ul>
+
+<p><strong>TCGA 10 条 DDR 通路：</strong></p>
+
+<ul>
+  <li>BER</li>
+  <li>DR</li>
+  <li>NHEJ</li>
+  <li>NER</li>
+  <li>MMR</li>
+  <li>HR</li>
+  <li>TLS</li>
+  <li>FA</li>
+  <li>NP</li>
+  <li>Other</li>
+</ul>
+
+<h2 id="最后">最后</h2>
+
+<p>谁不想点点鼠标就把活儿干了，早点下班不好吗？</p>
+
+<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-10-26，Galaxy生信云平台 UseGalaxy.cn 新增 2 个工具。]]></summary></entry><entry><title type="html">Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</title><link href="http://0.0.0.0:8090/posts/2023/10/25/tool-update/" rel="alternate" type="text/html" title="Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件" /><published>2023-10-25T00:00:00+00:00</published><updated>2023-10-25T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/25/tool-update</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/25/tool-update/"><![CDATA[<p>2023-10-25，Galaxy中国镜像站 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 平台新增 5 个工具。</p>
 
 <h2 id="maf-tools">MAF Tools</h2>
 
@@ -59,7 +128,7 @@
 
 <p>生信分析已经进入2.0时代，即云平台时代。</p>
 
-<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-10-25，Galaxy中国镜像站 UseGalaxy.cn 平台新增 5 个工具。]]></summary></entry><entry><title type="html">Galaxy云平台|如何制作临床信息表/三线表/Table 1</title><link href="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/" rel="alternate" type="text/html" title="Galaxy云平台|如何制作临床信息表/三线表/Table 1" /><published>2023-10-24T00:00:00+00:00</published><updated>2023-10-24T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/24/training-tableone</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/"><![CDATA[<p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
+<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-10-25，Galaxy中国镜像站 UseGalaxy.cn 平台新增 5 个工具。]]></summary></entry><entry><title type="html">Galaxy生信云|如何制作临床信息表/三线表/Table 1</title><link href="http://0.0.0.0:8090/posts/2023/10/24/tool-update/" rel="alternate" type="text/html" title="Galaxy生信云|如何制作临床信息表/三线表/Table 1" /><published>2023-10-24T00:00:00+00:00</published><updated>2023-10-24T00:00:00+00:00</updated><id>http://0.0.0.0:8090/posts/2023/10/24/tool-update</id><content type="html" xml:base="http://0.0.0.0:8090/posts/2023/10/24/tool-update/"><![CDATA[<p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
 
 <p>本文介绍通过 Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 制作临床基线表/三线表的方法。</p>
 

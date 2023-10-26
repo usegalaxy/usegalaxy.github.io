@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy Europe | Galaxy云平台|如何制作临床信息表/三线表/Table 1</title>
-  <meta property="og:title" content="Galaxy云平台|如何制作临床信息表/三线表/Table 1" />
-  <meta property="og:description" content="临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通..." />
+  <title>Galaxy Europe | Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</title>
+  <meta property="og:title" content="Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件" />
+  <meta property="og:description" content="2023-10-25，Galaxy中国镜像站 UseGalaxy.cn 平台新增 5 个工具。
+" />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
   <meta name="description" content="The European Galaxy Instance">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/24/training-tableone/">
+  <link rel="canonical" href="http://0.0.0.0:8090/posts/2023/10/25/tool-update/">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy Europe" href="/feed.xml">
 
@@ -147,18 +148,18 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/10/21/usegalaxy-cn/">
+    <a class="col-xs-1 text-center" href="/posts/2023/10/24/tool-update/">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">Galaxy云平台|如何制作临床信息表/三线表/Table 1</h2>
+        <h2 class="title">Galaxy生信云|Maftools高效地汇总、分析、注释和可视化肿瘤基因突变MAF文件</h2>
       </div>
       <hr />
     </div>
     
-    <a class="col-xs-1 text-center" href="/posts/2023/10/25/tools-maftools/">
+    <a class="col-xs-1 text-center" href="/posts/2023/10/26/tool-update/">
       »
     </a>
     
@@ -173,7 +174,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Oct 24, 2023
+              Oct 25, 2023
             </span>
 
             
@@ -182,7 +183,7 @@
             <span class="post-tags">
                 <span class="label label-success">Freiburg</span>
               
-                <span class="label label-info">training</span>
+                <span class="label label-info">tools</span>
               
               
             </span>
@@ -197,135 +198,68 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="news-content">
-        <p>临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。</p>
+        <p>2023-10-25，Galaxy中国镜像站 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 平台新增 5 个工具。</p>
 
-<p>本文介绍通过 Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 制作临床基线表/三线表的方法。</p>
-
-<h2 id="1-数据准备">1. 数据准备</h2>
-
-<p>要制作临床基线表/三线表，首先要将临床信息整理成表格：</p>
+<h2 id="maf-tools">MAF Tools</h2>
 
 <ul>
-  <li>
-    <p>每一行是一个样本；</p>
-  </li>
-  <li>
-    <p>每一列是一个变量。</p>
-  </li>
+  <li>Maftools-突变景观图: 绘制肿瘤基因突变景观图</li>
+  <li>Maftools-突变汇总: 汇总MAF文件中的突变信息</li>
+  <li>Maftools-共突变与互斥突变: 计算共突变和互斥突变</li>
+  <li>Maftools-队列比较：比较两个队列之间基因突变的差异</li>
+  <li>Maftools-突变过滤: 一键过滤同义突变</li>
 </ul>
 
-<p>比如：</p>
+<h2 id="部分结果展示">部分结果展示</h2>
 
-<p><img src="/assets/img/20231024-tableone-pbc.png" alt="示例数据" /></p>
+<h3 id="maftools-突变景观图">Maftools-突变景观图</h3>
 
-<p>本文将以平台自带的一个测试数据集（tableone_pbc.tsv）为例进行演示。</p>
+<p><img src="/assets/img/231025-galaxy-maftools-oncoplot.png" alt="" /></p>
 
-<h2 id="2-galaxy平台操作步骤">2. Galaxy平台操作步骤</h2>
+<p>肿瘤突变景观图是一种用于展示肿瘤样本中基因突变信息的图表。横坐标代表不同肿瘤样本，可以是来自不同患者的样本或同一患者不同时间点的样本。纵坐标通常表示不同的基因或基因组区域，其中可能包括与肿瘤发生和发展相关的关键基因。</p>
 
-<h3 id="21-选择工具">2.1 选择工具</h3>
+<h3 id="maftools-突变汇总">Maftools-突变汇总</h3>
 
-<ul>
-  <li>进入Galaxy生信云平台：<a href="https://usegalaxy.cn">usegalaxy.cn</a>（建议使用Chrome或Firefox浏览器）。</li>
-</ul>
+<p><img src="/assets/img/231025-galaxy-maftools-summary.png" alt="" /></p>
 
-<p><img src="/assets/img/20231024-galaxy-home.png" alt="Galaxy云平台" /></p>
+<p>计算 MAF 文件的摘要，该摘要以堆叠条形图的形式展示每个样本中突变的数量，并按 Variant_Classification 将汇总的变异类型显示为箱线图。</p>
 
-<ul>
-  <li>主页左侧工具列表中，找到 Statistics &gt; 临床基线表，点击进入工具界面。</li>
-</ul>
+<h3 id="maftools-共突变与互斥突变">Maftools-共突变与互斥突变</h3>
 
-<p><img src="/assets/img/20231024-galaxy-home-tableone.png" alt="" /></p>
+<p><img src="/assets/img/231025-galaxy-maftools-somaticInteraction.png" alt="" /></p>
 
-<h3 id="22-选择测试数据集">2.2 选择测试数据集</h3>
+<p>肿瘤基因的共突变和互斥突变是研究肿瘤遗传学时经常遇到的概念。</p>
 
-<p>点击输入数据最右边按钮 Browse datasets &gt; Data libraries &gt; Table data &gt; tableone_pbc.tsv，如图：</p>
+<p><strong>共突变（Co-occurring Mutations）：</strong>指两个或多个基因在同一肿瘤样本中同时发生突变。共突变可能是因为这些基因在同一通路或功能网络中相互作用，共同参与了肿瘤的发展过程。共突变的分析可以帮助我们理解肿瘤发展的关键途径，找到潜在的靶向治疗机会。</p>
 
-<p><img src="/assets/img/20231024-galaxy-click1-browse-datasets.png" alt="" />
-<img src="/assets/img/20231024-galaxy-click2-data-libraries.png" alt="" />
-<img src="/assets/img/20231024-galaxy-click3-table-data.png" alt="" />
-<img src="/assets/img/20231024-galaxy-click4-tableone-pbc.png" alt="" /></p>
+<p><strong>互斥突变（Mutually Exclusive Mutations）：</strong>指两个或多个基因突变在同一肿瘤样本中不会同时出现。这表明这些基因可能在肿瘤的发展中具有相似的功能或通路，突变发生在其中一个基因的同时抑制了其他基因的突变。互斥突变的分析有助于识别肿瘤发展过程中相互竞争的关键基因，并为潜在的治疗靶点提供线索。
+通过研究共突变和互斥突变，我们可以深入了解肿瘤细胞内复杂的遗传变异模式，识别肿瘤发展过程中的关键基因和通路，为精准医疗和个体化治疗提供重要的理论支持。</p>
 
-<h3 id="23-运行工具">2.3 运行工具</h3>
+<h3 id="maftools-队列比较">Maftools-队列比较</h3>
 
-<p>完成数据集的选择后，我们保持其他参数设定框为空，以默认参数运行工具：</p>
+<p><img src="/assets/img/231025-galaxy-maftools-compare-cohort.png" alt="" /></p>
 
-<p><img src="/assets/img/20231024-galaxy-tableone-run-tool.png" alt="" />
-<img src="/assets/img/20231024-galaxy-submit-done.png" alt="" />
-<img src="/assets/img/20231024-galaxy-run-tool-done.png" alt="" /></p>
+<p>癌症在突变模式方面存在差异。我们可以比较两个不同的队列来检测这种不同的突变基因。例如，Madan等人最近的一篇文章表明，复发性急性早幼粒细胞白血病（APL）患者往往在PML和RARA基因中具有突变，在疾病的初期阶段则不存在这些突变。可以使用mafCompare函数检测两个队列（在本例中为初期和复发性APL）之间的差异，该函数对两个队列中的所有基因执行Fisher检验以检测不同的突变基因。</p>
 
-<h3 id="23-查看结果">2.3 查看结果</h3>
+<h3 id="maftools-突变过滤">Maftools-突变过滤</h3>
 
-<p>点击眼睛图标，查看计算结果：</p>
+<p>将 MAF 文件拆分成两个文件：一个包含同义突变，另一个包含非同义突变。</p>
 
-<p><img src="/assets/img/20231024-galaxy-check-result.png" alt="" /></p>
+<p><img src="/assets/img/231025-galaxy-maftools-filter-non-silent.png" alt="" /></p>
 
-<p>结果展示：</p>
+<p><img src="/assets/img/231025-galaxy-maftools-filter-silent.png" alt="" /></p>
 
-<p><img src="/assets/img/20231024-galaxy-show-result.png" alt="" /></p>
+<p><strong>非同义突变类型：</strong></p>
 
-<h3 id="24-下载结果">2.4 下载结果</h3>
+<p>“Frame_Shift_Del”, “Frame_Shift_Ins”, “Splice_Site”, “Translation_Start_Site”,”Nonsense_Mutation”, “Nonstop_Mutation”, “In_Frame_Del”,”In_Frame_Ins”, “Missense_Mutation”</p>
 
-<p>点击显示数据详情：</p>
+<p>这些突变具有高度或中等的突变后果。</p>
 
-<p><img src="/assets/img/20231024-galaxy-click-datasets.png" alt="" /></p>
-
-<p>点击磁盘图标下载结果文件：</p>
-
-<p><img src="/assets/img/20231024-galaxy-download.png" alt="" /></p>
-
-<p>结果是一个文本文件，可以用文本编辑器或者Excel打开：</p>
-
-<p><img src="/assets/img/20231024-galaxy-result-table.png" alt="" /></p>
-
-<h2 id="3-调整参数重新计算">3. 调整参数重新计算</h2>
-
-<p>在Galaxy平台上重新调整参数再次运行工具是非常方便的，只需要点击界面中的“重运行”按钮：</p>
-
-<p><img src="/assets/img/20231024-galaxy-rerun.png" alt="" /></p>
-
-<p>可以看到，界面中出现了刚才运行任务时的参数设置，也就是说，当重新运行任务时，上一次运行的参数得到了保留，我们只需要进行必要的修改，即可再次运行工具。</p>
-
-<p><img src="/assets/img/20231024-galaxy-rerun-ui.png" alt="" /></p>
-
-<p>进行必要的修改，如：</p>
-
-<ul>
-  <li>指定一个分类变量：sex</li>
-  <li>指定两个符合正态分布的变量：trig, platelet（仅仅是用于举例，实际要依变量的性质而定）</li>
-  <li>指定两个不符合正态分布的变量：time, age（仅仅是用于举例，实际要依变量的性质而定）</li>
-  <li>指定两个分类变量：status, trt。当分类变量以数值表示时，必须明确指定其为分类变量，否则会自动按数值变量处理。</li>
-</ul>
-
-<p><img src="/assets/img/20231024-galaxy-rerun-ui-setting.png" alt="" /></p>
-
-<p>再次点击 Run Tool 运行，查看结果：</p>
-
-<p><img src="/assets/img/20231024-galaxy-rerun-result.png" alt="" /></p>
-
-<p>可以看到：</p>
-
-<ul>
-  <li>对于符合正态分布的变量，计算了平均数和标准差：mean(SD)</li>
-  <li>对于不符合正态分布的变量，计算了中位数和上下四分位数：median(IQR)</li>
-  <li>对于分类变量，计算了它们的数量及其中总数中的百分比（%），以数值表示的分类变量得到了正确的处理</li>
-</ul>
-
-<p>此外，表中还展示了 p 值 ，关于检验方法：</p>
-
-<ul>
-  <li>正态分布的数据，进行了参数检验</li>
-  <li>不符合正态分布的数据，进行了非参数检验</li>
-  <li>分类数据，进行了Fisher精确检验</li>
-</ul>
-
-<p>限于篇幅，本文就介绍到这里，更多生信工具，请到Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 网站进行探索。</p>
-
-<h2 id="3-最后">3. 最后</h2>
+<h2 id="最后">最后</h2>
 
 <p>生信分析已经进入2.0时代，即云平台时代。</p>
 
 <p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>
-
 
       </div>
     </div>
@@ -367,7 +301,7 @@ unless otherwise specified.</p>
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-24-training-tableone.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-10-25-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                       <li><i class="fa fa-envelope"></i><a href="mailto:contact@usegalaxy.eu">contact@usegalaxy.eu</a></li>
                     
