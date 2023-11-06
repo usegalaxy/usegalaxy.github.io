@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Galaxy 中国 | UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制</title>
+  <meta property="og:title" content="UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制" />
+  <meta property="og:description" content="2023-11-06，Galaxy生信云平台 UseGalaxy.cn 新增circos圈图绘制工具。
+" />
+  <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
+  <meta name="description" content="The European Galaxy Instance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/06/tool-update/plain.html">
+  <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
+
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="/assets/js/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <div class="container" id="maincontainer">
+          
+
+
+
+
+<section id="news-page">
+  <div class="row news-header-row">
+    
+    <a class="col-xs-1 text-center" href="/posts/2023/11/05/tool-update/plain.html">
+      «
+    </a>
+    
+    <div class="col-xs-10 ">
+      <div class="text-center">
+        <h2 class="title">UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制</h2>
+      </div>
+      <hr />
+    </div>
+    
+  </div>
+  <div class="row post-metadata">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-6">
+            
+
+        </div>
+        <div class="col-md-6 text-right">
+          <div>
+            <span class="post-date">
+              Nov 6, 2023
+            </span>
+
+            
+
+            <br />
+            <span class="post-tags">
+                <span class="label label-success">UseGalaxyCN</span>
+              
+                <span class="label label-info">tools</span>
+              
+              
+            </span>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="news-content">
+        <p>2023-11-06，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增circos圈图绘制工具。</p>
+
+<h2 id="graphdisplay-data">Graph/Display Data</h2>
+
+<ul>
+  <li>Circos visualizes data in a circular layout (Galaxy Version 0.69.8+galaxy12)</li>
+</ul>
+
+<p>Circos（Krzywinski等人，2009年）是一个用于以圆形布局可视化数据的软件包。这使得Circos非常适合探索对象或位置之间的关系。Circos图表已经出现在成千上万的科学出版物中。尽管最初设计用于可视化基因组数据，但它可以根据任何领域的数据创建图表。</p>
+
+<h2 id="文章图形复现">文章图形复现</h2>
+
+<p>图形/数据来源：</p>
+
+<blockquote>
+  <p>Teles Alves I, Hiltemann S, Hartjes T, et al. Gene fusions by chromothripsis of chromosome 5q in the VCaP prostate cancer cell line. Hum Genet. 2013;132(6):709-713. doi:10.1007/s00439-013-1308-1</p>
+</blockquote>
+
+<p><img src="/assets/img/231106-tool-update-circos-target.png" alt="" /></p>
+
+<p>在这篇文章中，各种来源的数据被整合到一个综合的Circos图中。下面我们就来复现这个图，首先我们先了解一下Circos的基础。</p>
+
+<h3 id="1-circos基础">1. Circos基础</h3>
+
+<h4 id="11-外层骨架ideogram">1.1 外层骨架（Ideogram）</h4>
+
+<p>对于基因组数据，通常是染色体，但也可能是物种、基因，或者是另一个分辨率级别，这取决于你想要展示的关系。对于非基因组数据，这可能是人群中的个体、国家，或者是你想用来进行分组的数据的任何其他主要方面。</p>
+
+<h4 id="12-数据轨道data-tracks">1.2 数据轨道（Data Tracks）</h4>
+
+<p>在骨架之内，我们可以绘制数据轨道。有不同类型的图表可用，例如：</p>
+
+<ul>
+  <li>散点图（Scatter plot）</li>
+  <li>线图（Line plot）</li>
+  <li>直方图（Histogram）</li>
+  <li>热图（Heatmap）</li>
+  <li>方块图（Tile）</li>
+  <li>文本（Text）</li>
+  <li>连接（Link）</li>
+  <li>条带（Ribbons）</li>
+</ul>
+
+<p>轨道可以进行很多定制，一些相关的概念包括：</p>
+
+<ul>
+  <li>
+    <p><strong>Radius</strong>：轨道的半径决定了它在中心（0）和表意图（1）之间的位置。</p>
+  </li>
+  <li>
+    <p><strong>Rules</strong>：可以定义规则，根据数据点的值改变数据点的颜色，例如。</p>
+  </li>
+  <li>
+    <p><strong>Axes and backgrounds</strong>：可以在数据轨道上绘制轴和背景。</p>
+  </li>
+</ul>
+
+<h3 id="2-复现步骤">2. 复现步骤</h3>
+
+<p>工具位置：UseGalaxy.cn首页 &gt; Graph/Display Data &gt; Circos visualizes data in a circular layout</p>
+
+<p>或者：<a href="https://usegalaxy.cn/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy12">https://usegalaxy.cn/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy12</a></p>
+
+<h4 id="21-数据准备">2.1 数据准备</h4>
+
+<p>可以下载原文中的数据上传到网站：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4494146/files/VCaP_Copy-Number.tsv
+https://zenodo.org/record/4494146/files/VCaP_B-allele-Frequency.tsv
+https://zenodo.org/record/4494146/files/VCaP-highConfidenceJunctions.tsv
+https://zenodo.org/record/4494146/files/hg18_karyotype_withbands.txt
+</code></pre></div></div>
+
+<p>或者用网站上整理好的共享数据：</p>
+
+<p>网站首页（UseGalaxy.cn）&gt; 数据共享 &gt; 数据库 &gt; circos，该目录下有4个测试文件：</p>
+
+<ul>
+  <li>hg18_karyotype_withbands.txt，染色体骨架文件</li>
+  <li>circos-sv.tsv，结构变异信息</li>
+  <li>circos-cnv.tsv，拷贝数变异信息</li>
+  <li>circos-baf.tsv，次等位基因频率</li>
+</ul>
+
+<h4 id="22-ideogram">2.2 Ideogram</h4>
+
+<p>由于圈图要呈现的数据很多，参数设置复杂，因此不可能一次就画好，而是有一个不断迭代的过程，一圈一圈地画。</p>
+
+<p><strong>操作：设置Ideogram</strong></p>
+
+<p>我们首先只设置骨架文件，其他参数保持默认：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-1-karyotype.png" alt="" /></p>
+
+<p>运行看看结果：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-result.png" alt="" /></p>
+
+<p>可以看到，只有一个圈。</p>
+
+<p>我们接着设置：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-setting.png" alt="" /></p>
+
+<p>点击“Run Tool”，等待运行结束，点击结果文件右边的铅笔图标，将文件改名为：<strong>Circos Plot ideogram</strong>。</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-result-ok.png" alt="" /></p>
+
+<p><strong>小知识：</strong></p>
+
+<blockquote>
+  <p>染色体定义的格式如下：chr - ID LABEL START END COLOR</p>
+
+  <p>前两个字段始终是<strong>chr</strong>，表示该行定义了一个染色体，以及 <strong>-</strong>。第二个字段定义了父结构，仅用于染色体条带定义。</p>
+
+  <p><strong>ID</strong> 是数据文件中使用的标识符，而 <strong>LABEL</strong> 是将出现在图像上的骨架旁边的文本。</p>
+
+  <p><strong>START</strong>和<strong>END</strong>定义了染色体的大小。核型文件应该存储整个染色体的大小，而不仅仅是您希望绘制的区域。我们可以使用其他参数仅绘制数据的子集（例如，只有一个染色体）。</p>
+
+  <p><strong>COLOR</strong>参数是可选的，要使用内置的颜色方案，请再次在此列中使用chr1、chr2等。</p>
+</blockquote>
+
+<h4 id="23-数据轨道一结构变异">2.3 数据轨道一：结构变异</h4>
+
+<p>结构变异需要提供两个断点的位置，如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chromosome    start    end    chromosome    start    end
+</code></pre></div></div>
+
+<ul>
+  <li>第一个断点的染色体编号，开始位置，结束位置</li>
+  <li>第二个断点的染色体编号，开始位置，结束位置</li>
+</ul>
+
+<p><img src="/assets/img/231106-tool-update-circos-2-sv-data.png" alt="" /></p>
+
+<p><strong>操作：添加结构变异的连线轨道</strong></p>
+
+<ol>
+  <li>
+    <p>点击右侧历史记录中的<strong>Circos Plot ideogram</strong>文件名，点击“Run Job Again”（一个转圈的箭头）</p>
+  </li>
+  <li>
+    <p>结构变异轨道参数设置：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-2-sv-setting.png" alt="" /></p>
+
+<p><img src="/assets/img/231106-tool-update-circos-2-sv-result1.png" alt="" /></p>
+
+<p>可以看到，5号染色体有许多染色体内的结构变异，我们可以单独画出5号染色体的结构变异。</p>
+
+<p>最后， 将结果文件改名为：<strong>Circos Plot SVs</strong></p>
+
+<p><strong>操作：只画5号染色体</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行刚才的工具</p>
+  </li>
+  <li>
+    <p>改变参数设置：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-2-sv-chr5-setting.png" alt="" /></p>
+
+<p>得到如下图片：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-2-sv-chr5.png" alt="" /></p>
+
+<h4 id="24-数据轨道二拷贝数变异">2.4 数据轨道二：拷贝数变异</h4>
+
+<p>拷贝数变异需要准备的数据格式：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr    start    end    value
+</code></pre></div></div>
+<ul>
+  <li>chr，染色体</li>
+  <li>chr，变异开始位置</li>
+  <li>end, 变异结束位置</li>
+  <li>value，变异倍数</li>
+</ul>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-data.png" alt="" /></p>
+
+<p><strong>操作：增加拷贝数轨道</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行画“Circos Plot SVs”的工具。</p>
+  </li>
+  <li>
+    <p>增加一个散点图轨道到图形中：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting.png" alt="" /></p>
+
+<p>结果如下：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result1.png" alt="" /></p>
+
+<p>可以看到，拷贝数轨道与结构变异轨道重叠了。这是因为没有个性结构变异轨道的半径设置：</p>
+
+<ol>
+  <li>重新运行工具，改变以下参数：</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In "Link Tracks":
+    - In "1: Link Data":
+        - "Inside Radius": 0.75
+</code></pre></div></div>
+
+<p>应该看到这样的图：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result2.png" alt="" /></p>
+
+<p><strong>操作：用不同颜色标记拷贝数变异状态</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行上一步的结果</p>
+  </li>
+  <li>
+    <p>在<strong>2D data track</strong>的拷贝数轨道中，增加以下规则：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting2.png" alt="" /></p>
+
+<p>应该得到如下结果：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result3.png" alt="" /></p>
+
+<p><strong>操作：为拷贝数轨道增加坐标轴</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行刚才的结果</p>
+  </li>
+  <li>
+    <p>在<strong>2D data track</strong>中的拷贝数轨道设置页面：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting3.png" alt="" /></p>
+
+<p>结果如下：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-3-cnv-final.png" alt="" /></p>
+
+<p>最后， 重命名结果文件为：<strong>Circos Plot CopyNumber</strong></p>
+
+<h4 id="25-数据轨道三次等位基因频率">2.5 数据轨道三：次等位基因频率</h4>
+
+<p>数据格式与拷贝数变异的类似，也是准备4列数据：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr    start    end    value
+</code></pre></div></div>
+
+<p><strong>操作：增加次等位基因频率到图中</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行刚才的工具（<strong>Circos Plot CopyNumber</strong>）</p>
+  </li>
+  <li>
+    <p>增加新的散点图轨道到图中：</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-4-b-allel-setting.png" alt="" /></p>
+
+<p>最后， 重命名结果文件：<strong>Circos Plot BAF</strong></p>
+
+<p>结果图：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-4-b-allel-result.png" alt="" /></p>
+
+<h4 id="26-存在问题如何将结构变异轨道拆分成两个">2.6 存在问题：如何将结构变异轨道拆分成两个</h4>
+
+<p><strong>操作：两个连接轨道</strong></p>
+
+<ol>
+  <li>
+    <p>重新运行刚才的工具（<strong>Circos Plot BAF</strong>）</p>
+  </li>
+  <li>
+    <p>配置两个单独的连接轨道</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/231106-tool-update-circos-5-question-setting1.png" alt="" />
+<img src="/assets/img/231106-tool-update-circos-5-question-setting2.png" alt="" /></p>
+
+<p>最后结果：</p>
+
+<p><img src="/assets/img/231106-tool-update-circos-6-recreate-final.png" alt="" /></p>
+
+<p>可以看到，跟原图完全一样，可以说复现效果达到了100%。</p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+<footer class="navbar-default">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <!--
+ -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <ul class="contact-info">
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-06-tool-update.md">Edit this page on GitHub</a></li> -->
+                    
+                    <!--
+                    
+                    
+                      <li><i class="fa fa-rss"></i>Subscribe <a href="/feed.xml">via RSS (UseGalaxy.eu Feed)</a></li>
+                    -->
+
+                    <div class="image-link">
+						<li><i class="fa fa-wechat"></i><a href="#">简说基因</a></li>
+						<div class="image-container">
+							<p>Galaxy平台最新消息，关注公众号：简说基因</p> <!-- 添加描述文字 -->
+							<img src="/assets/media/wechat-official.jpg" alt="图片描述">
+						 </div>
+					</div>
+
+					<div class="image-link">
+					    <li><i class="fa fa-qq"></i><a href="#">Galaxy中国交流群</a></li>
+					    <div class="image-container">
+						    <p>欢迎加入Galaxy中国交流群，群号：925694514</p> <!-- 添加描述文字 -->
+						    <img src="/assets/media/qq-group.jpg" alt="图片描述">
+					    </div>
+					</div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script async defer data-domain="galaxyproject.eu" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+  </body>
+</html>
