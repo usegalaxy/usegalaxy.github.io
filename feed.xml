@@ -1,4 +1,313 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-06T16:17:48+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制</title><link href="https://usegalaxy.github.io/posts/2023/11/06/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制" /><published>2023-11-06T00:00:00+00:00</published><updated>2023-11-06T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/06/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/06/tool-update/"><![CDATA[<p>2023-11-06，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增circos圈图绘制工具。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-08T15:30:40+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云平台文本文件操作手册</title><link href="https://usegalaxy.github.io/posts/2023/11/08/training/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云平台文本文件操作手册" /><published>2023-11-08T00:00:00+00:00</published><updated>2023-11-08T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/08/training</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/08/training/"><![CDATA[<p>文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。</p>
+
+<p>文本文件的操作贯穿生信数据处理的始终，甚至有人开玩笑说，搞生信分析，就是进行各种文件格式的转换。有时候确实可以这么说，因为现在有许多软件/包都写得非常完善了，只需要准备好相应的输入文件，一行代码即可完成分析。</p>
+
+<p>可以说，善于文本文件的处理，生信数据分析就站在了一个非常高的起点。<a href="https://usegalaxy.cn">UseGalaxy.cn</a>平台有非常强大的文本数据处理功能，本文就来系统地介绍这些文本处理工具的用法。</p>
+
+<h2 id="测序数据">测序数据</h2>
+
+<ul>
+  <li>Libraries &gt; Table data: heatmap_test.tsv，一个模拟的 RNA-seq 表达量矩阵数据。</li>
+</ul>
+
+<h2 id="1-文本操纵text-manipulation">1. 文本操纵（Text Manipulation）</h2>
+
+<h3 id="选择开始的多少行">选择开始的多少行</h3>
+
+<p><strong>工具：</strong>Text Manipulation &gt; Select first lines from a dataset</p>
+
+<p><strong>目标：</strong>选择前10行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select first: 11 (因为文件有表头，所以这里设置为前11行)</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-first.png" alt="" /></p>
+
+<h3 id="选择结尾的多少行">选择结尾的多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Select last lines from a dataset</p>
+
+<p><strong>目标：</strong> 选择结尾的10行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select last: 10</li>
+  <li>from: heatmap_test.tsv</li>
+  <li>Dataset has a header: Yes</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-last.png" alt="" /></p>
+
+<h3 id="随机选择多少行">随机选择多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Select random lines from a file</p>
+
+<p><strong>目标：</strong> 随机选择5行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Randomly select: 5</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-random.png" alt="" /></p>
+
+<h3 id="删除开始的多少行">删除开始的多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Remove beginning of a file</p>
+
+<p><strong>目标：</strong> 删除表头</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Remove first: 1</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-remove-begining.png" alt="" /></p>
+
+<h3 id="选择列">选择列</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Cut columns from a table</p>
+
+<p><strong>目标：</strong> 选择第1，2，5列</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Cut columns: c1,c2,c5</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-cut.png" alt="" /></p>
+
+<h3 id="增加列到一个数据表">增加列到一个数据表</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Add column to an existing dataset</p>
+
+<p><strong>目标：</strong> 在最后一列增加一个<strong>+</strong>号</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Add this value：+</li>
+  <li>to Dataset: Remove beginning on data 1</li>
+  <li>Iterate?: NO</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-add-plus.png" alt="" /></p>
+
+<p><strong>目标：</strong> 在最后一列增加从1开始不断迭代的编号</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Add this value：1</li>
+  <li>to Dataset: Remove beginning on data 1</li>
+  <li>Iterate?: YES</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-add-1.png" alt="" /></p>
+
+<h3 id="纵向合并多个文件">纵向合并多个文件</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Concatenate datasets tail-to-head</p>
+
+<p><strong>目标：</strong> 合并两个文件</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Concatenate Dataset: Select first on data 1</li>
+  <li>Dataset: Select last on data 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-cat.png" alt="" /></p>
+
+<h3 id="横向合并两个文件">横向合并两个文件</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Paste two files side by side</p>
+
+<p><strong>目标：</strong> 并排粘贴两个文件</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Paste: Cut on data 1</li>
+  <li>and: Cut on data 1</li>
+  <li>Delimit by: TAB</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-paste.png" alt="" /></p>
+
+<h2 id="2-过滤和排序filter-and-sort">2. 过滤和排序（Filter and Sort）</h2>
+
+<h3 id="根据正则表达式匹配行">根据正则表达式匹配行</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Select lines that match an expression</p>
+
+<p><strong>目标：</strong> 筛选出前面纵向合并的文件中的表头</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select lines from: Concatenate datasets on data 4 and data 2</li>
+  <li>that: Matching</li>
+  <li>the pattern: Test1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-grep.png" alt="" /></p>
+
+<p><strong>目标：</strong> 筛选出前面纵向合并的文件中不是表头的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select lines from: Concatenate datasets on data 4 and data 2</li>
+  <li>that: NOT Matching</li>
+  <li>the pattern: Test1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-grep-v.png" alt="" /></p>
+
+<h3 id="依据某一列过滤数据">依据某一列过滤数据</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Filter data on any column using simple expressions</p>
+
+<p><strong>目标：</strong> 筛选第2列（即样本Test1所在列）值大于1的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Filter：heatmap_test.tsv</li>
+  <li>With following condition: c2 &gt; 1</li>
+  <li>Number of header lines to skip: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-filter-by-column.png" alt="" /></p>
+
+<h3 id="排序数据">排序数据</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Sort data in ascending or descending order</p>
+
+<p><strong>目标：</strong> 根据表达矩阵的第2列，降序排列行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Sort Dataset: heatmap_test.tsv</li>
+  <li>on column: Column 2</li>
+  <li>with flavor: Numerical sort</li>
+  <li>everything in: Descending order</li>
+  <li>Number of header lines to skip: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-sort-desc.png" alt="" /></p>
+
+<h2 id="3-连接提取和分组join-subtract-and-group">3. 连接、提取和分组（Join, Subtract and Group）</h2>
+
+<h3 id="依据特定列连接两个数据表">依据特定列连接两个数据表</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Cut columns</p>
+
+<p><strong>目标：</strong> 选择文件前3列</p>
+
+<p><strong>操作：</strong></p>
+<ul>
+  <li>Cut columns: c1,c2, c3</li>
+  <li>From: Select first on data 1</li>
+</ul>
+
+<p><strong>工具：</strong> Join, Subtract and Group &gt; Join two Datasets side by side on a specified field</p>
+
+<p><strong>目标：</strong> 连接两个数据表</p>
+
+<p><strong>操作：</strong></p>
+<ul>
+  <li>Join: Cut on data 2</li>
+  <li>using column: Column: 1</li>
+  <li>with: heatmap_test.tsv</li>
+  <li>and column: Column: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-join.png" alt="" /></p>
+
+<h3 id="比较两个数据表找出相同或不同的行">比较两个数据表找出相同或不同的行</h3>
+
+<p><strong>工具：</strong> Join, Subtract and Group &gt; Compare two Datasets to find common or distinct rows</p>
+
+<p><strong>目标：</strong> 查找表1中，某一列的值出现在表2中某一列的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Compare：Select random lines on data 1</li>
+  <li>Using column: Column: 1</li>
+  <li>against：heatmap_test.tsv</li>
+  <li>and column：Column: 1</li>
+  <li>To find: Matching rows of 1st dataset</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-compare-match.png" alt="" /></p>
+
+<p><strong>目标：</strong> 查找表1中，某一列的值没有出现在表2中某一列的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Compare：Select random lines on data 1</li>
+  <li>Using column: Column: 1</li>
+  <li>against：heatmap_test.tsv</li>
+  <li>and column：Column: 1</li>
+  <li>To find: Non Matching rows of 1st dataset</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p>因为表1所有的行，都在表2中，因此结果为空。</p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。]]></summary></entry><entry><title type="html">UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制</title><link href="https://usegalaxy.github.io/posts/2023/11/06/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|生物信息必备技能-出版级别的circos圈图绘制" /><published>2023-11-06T00:00:00+00:00</published><updated>2023-11-06T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/06/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/06/tool-update/"><![CDATA[<p>2023-11-06，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增circos圈图绘制工具。</p>
 
 <h2 id="graphdisplay-data">Graph/Display Data</h2>
 

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Galaxy 中国 | UseGalaxy.cn生信云平台文本文件操作手册</title>
+  <meta property="og:title" content="UseGalaxy.cn生信云平台文本文件操作手册" />
+  <meta property="og:description" content="文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考..." />
+  <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
+  <meta name="description" content="The European Galaxy Instance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/08/training/">
+  <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
+
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="/assets/js/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</head>
+
+
+    
+    
+    
+
+  <body class="location-freiburg">
+    <div id="wrap">
+      <div id="main">
+        <div class="navbar">
+
+  <div class="container">
+    
+    
+
+    
+    
+    
+
+    
+
+    <div class="navbar-header">
+      <div class="navbar-brand">
+        
+        <img alt="galaxy eu logo" src="/assets/media/galaxy-eu-logo.inv.svg" style="height: 20px"/>
+        
+      </div>
+
+      <a class="navbar-brand" href="/" style="padding-left: 6px">
+        Galaxy 中国
+      </a>
+      
+        <span class="navbar-brand" style="color: white">
+        /
+        </span>
+        <a class="navbar-brand" href="https://usegalaxy.github.io/freiburg">
+          UseGalaxyCN
+        </a>
+      
+    </div>
+
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Member Sites <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+              
+                <li>
+                  <a class="page-link" href="/freiburg/">UseGalaxyCN</a>
+                </li>
+              
+             </ul>
+           </li>
+
+          
+          
+            <li>
+              <a class="page-link" href="/freiburg/news">News</a>
+            </li>
+          
+            <li>
+              <a class="page-link" href="/freiburg/events">Events</a>
+            </li>
+          
+          
+        </ul>
+      </div>
+  </div>
+</div>
+
+        <div class="container" id="maincontainer">
+          
+
+
+
+
+<section id="news-page">
+  <div class="row news-header-row">
+    
+    <a class="col-xs-1 text-center" href="/posts/2023/11/06/tool-update/">
+      «
+    </a>
+    
+    <div class="col-xs-10 ">
+      <div class="text-center">
+        <h2 class="title">UseGalaxy.cn生信云平台文本文件操作手册</h2>
+      </div>
+      <hr />
+    </div>
+    
+  </div>
+  <div class="row post-metadata">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-6">
+            
+
+        </div>
+        <div class="col-md-6 text-right">
+          <div>
+            <span class="post-date">
+              Nov 8, 2023
+            </span>
+
+            
+
+            <br />
+            <span class="post-tags">
+                <span class="label label-success">UseGalaxyCN</span>
+              
+                <span class="label label-info">tools</span>
+              
+              
+            </span>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="news-content">
+        <p>文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。</p>
+
+<p>文本文件的操作贯穿生信数据处理的始终，甚至有人开玩笑说，搞生信分析，就是进行各种文件格式的转换。有时候确实可以这么说，因为现在有许多软件/包都写得非常完善了，只需要准备好相应的输入文件，一行代码即可完成分析。</p>
+
+<p>可以说，善于文本文件的处理，生信数据分析就站在了一个非常高的起点。<a href="https://usegalaxy.cn">UseGalaxy.cn</a>平台有非常强大的文本数据处理功能，本文就来系统地介绍这些文本处理工具的用法。</p>
+
+<h2 id="测序数据">测序数据</h2>
+
+<ul>
+  <li>Libraries &gt; Table data: heatmap_test.tsv，一个模拟的 RNA-seq 表达量矩阵数据。</li>
+</ul>
+
+<h2 id="1-文本操纵text-manipulation">1. 文本操纵（Text Manipulation）</h2>
+
+<h3 id="选择开始的多少行">选择开始的多少行</h3>
+
+<p><strong>工具：</strong>Text Manipulation &gt; Select first lines from a dataset</p>
+
+<p><strong>目标：</strong>选择前10行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select first: 11 (因为文件有表头，所以这里设置为前11行)</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-first.png" alt="" /></p>
+
+<h3 id="选择结尾的多少行">选择结尾的多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Select last lines from a dataset</p>
+
+<p><strong>目标：</strong> 选择结尾的10行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select last: 10</li>
+  <li>from: heatmap_test.tsv</li>
+  <li>Dataset has a header: Yes</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-last.png" alt="" /></p>
+
+<h3 id="随机选择多少行">随机选择多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Select random lines from a file</p>
+
+<p><strong>目标：</strong> 随机选择5行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Randomly select: 5</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-select-random.png" alt="" /></p>
+
+<h3 id="删除开始的多少行">删除开始的多少行</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Remove beginning of a file</p>
+
+<p><strong>目标：</strong> 删除表头</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Remove first: 1</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-remove-begining.png" alt="" /></p>
+
+<h3 id="选择列">选择列</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Cut columns from a table</p>
+
+<p><strong>目标：</strong> 选择第1，2，5列</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Cut columns: c1,c2,c5</li>
+  <li>from: heatmap_test.tsv</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-cut.png" alt="" /></p>
+
+<h3 id="增加列到一个数据表">增加列到一个数据表</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Add column to an existing dataset</p>
+
+<p><strong>目标：</strong> 在最后一列增加一个<strong>+</strong>号</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Add this value：+</li>
+  <li>to Dataset: Remove beginning on data 1</li>
+  <li>Iterate?: NO</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-add-plus.png" alt="" /></p>
+
+<p><strong>目标：</strong> 在最后一列增加从1开始不断迭代的编号</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Add this value：1</li>
+  <li>to Dataset: Remove beginning on data 1</li>
+  <li>Iterate?: YES</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-add-1.png" alt="" /></p>
+
+<h3 id="纵向合并多个文件">纵向合并多个文件</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Concatenate datasets tail-to-head</p>
+
+<p><strong>目标：</strong> 合并两个文件</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Concatenate Dataset: Select first on data 1</li>
+  <li>Dataset: Select last on data 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-cat.png" alt="" /></p>
+
+<h3 id="横向合并两个文件">横向合并两个文件</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Paste two files side by side</p>
+
+<p><strong>目标：</strong> 并排粘贴两个文件</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Paste: Cut on data 1</li>
+  <li>and: Cut on data 1</li>
+  <li>Delimit by: TAB</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-paste.png" alt="" /></p>
+
+<h2 id="2-过滤和排序filter-and-sort">2. 过滤和排序（Filter and Sort）</h2>
+
+<h3 id="根据正则表达式匹配行">根据正则表达式匹配行</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Select lines that match an expression</p>
+
+<p><strong>目标：</strong> 筛选出前面纵向合并的文件中的表头</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select lines from: Concatenate datasets on data 4 and data 2</li>
+  <li>that: Matching</li>
+  <li>the pattern: Test1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-grep.png" alt="" /></p>
+
+<p><strong>目标：</strong> 筛选出前面纵向合并的文件中不是表头的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Select lines from: Concatenate datasets on data 4 and data 2</li>
+  <li>that: NOT Matching</li>
+  <li>the pattern: Test1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-grep-v.png" alt="" /></p>
+
+<h3 id="依据某一列过滤数据">依据某一列过滤数据</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Filter data on any column using simple expressions</p>
+
+<p><strong>目标：</strong> 筛选第2列（即样本Test1所在列）值大于1的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Filter：heatmap_test.tsv</li>
+  <li>With following condition: c2 &gt; 1</li>
+  <li>Number of header lines to skip: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-filter-by-column.png" alt="" /></p>
+
+<h3 id="排序数据">排序数据</h3>
+
+<p><strong>工具：</strong> Filter and Sort &gt; Sort data in ascending or descending order</p>
+
+<p><strong>目标：</strong> 根据表达矩阵的第2列，降序排列行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Sort Dataset: heatmap_test.tsv</li>
+  <li>on column: Column 2</li>
+  <li>with flavor: Numerical sort</li>
+  <li>everything in: Descending order</li>
+  <li>Number of header lines to skip: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-sort-desc.png" alt="" /></p>
+
+<h2 id="3-连接提取和分组join-subtract-and-group">3. 连接、提取和分组（Join, Subtract and Group）</h2>
+
+<h3 id="依据特定列连接两个数据表">依据特定列连接两个数据表</h3>
+
+<p><strong>工具：</strong> Text Manipulation &gt; Cut columns</p>
+
+<p><strong>目标：</strong> 选择文件前3列</p>
+
+<p><strong>操作：</strong></p>
+<ul>
+  <li>Cut columns: c1,c2, c3</li>
+  <li>From: Select first on data 1</li>
+</ul>
+
+<p><strong>工具：</strong> Join, Subtract and Group &gt; Join two Datasets side by side on a specified field</p>
+
+<p><strong>目标：</strong> 连接两个数据表</p>
+
+<p><strong>操作：</strong></p>
+<ul>
+  <li>Join: Cut on data 2</li>
+  <li>using column: Column: 1</li>
+  <li>with: heatmap_test.tsv</li>
+  <li>and column: Column: 1</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-join.png" alt="" /></p>
+
+<h3 id="比较两个数据表找出相同或不同的行">比较两个数据表找出相同或不同的行</h3>
+
+<p><strong>工具：</strong> Join, Subtract and Group &gt; Compare two Datasets to find common or distinct rows</p>
+
+<p><strong>目标：</strong> 查找表1中，某一列的值出现在表2中某一列的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Compare：Select random lines on data 1</li>
+  <li>Using column: Column: 1</li>
+  <li>against：heatmap_test.tsv</li>
+  <li>and column：Column: 1</li>
+  <li>To find: Matching rows of 1st dataset</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p><img src="/assets/img/231108-training-compare-match.png" alt="" /></p>
+
+<p><strong>目标：</strong> 查找表1中，某一列的值没有出现在表2中某一列的行</p>
+
+<p><strong>操作：</strong></p>
+
+<ul>
+  <li>Compare：Select random lines on data 1</li>
+  <li>Using column: Column: 1</li>
+  <li>against：heatmap_test.tsv</li>
+  <li>and column：Column: 1</li>
+  <li>To find: Non Matching rows of 1st dataset</li>
+</ul>
+
+<p><strong>结果：</strong></p>
+
+<p>因为表1所有的行，都在表2中，因此结果为空。</p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>
+
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+<footer class="navbar-default">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <!--
+ -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <ul class="contact-info">
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-11-08-training.md">Edit this page on GitHub</a></li> -->
+                    
+                    <!--
+                    
+                    
+                      <li><i class="fa fa-rss"></i>Subscribe <a href="/feed.xml">via RSS (UseGalaxy.eu Feed)</a></li>
+                    -->
+
+                    <div class="image-link">
+						<li><i class="fa fa-wechat"></i><a href="#">简说基因</a></li>
+						<div class="image-container">
+							<p>Galaxy平台最新消息，关注公众号：简说基因</p> <!-- 添加描述文字 -->
+							<img src="/assets/media/wechat-official.jpg" alt="图片描述">
+						 </div>
+					</div>
+
+					<div class="image-link">
+					    <li><i class="fa fa-qq"></i><a href="#">Galaxy中国交流群</a></li>
+					    <div class="image-container">
+						    <p>欢迎加入Galaxy中国交流群，群号：925694514</p> <!-- 添加描述文字 -->
+						    <img src="/assets/media/qq-group.jpg" alt="图片描述">
+					    </div>
+					</div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script async defer data-domain="galaxyproject.eu" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+  </body>
+</html>
