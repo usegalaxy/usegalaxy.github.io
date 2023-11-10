@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Galaxy 中国 | UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集</title>
+  <meta property="og:title" content="UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集" />
+  <meta property="og:description" content="2023-11-10，Galaxy生信云平台 UseGalaxy.cn 新增 12 个工具。
+" />
+  <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
+  <meta name="description" content="The European Galaxy Instance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/10/tool-update/plain.html">
+  <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
+
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="/assets/js/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <div class="container" id="maincontainer">
+          
+
+
+
+
+<section id="news-page">
+  <div class="row news-header-row">
+    
+    <a class="col-xs-1 text-center" href="/posts/2023/11/08/training/plain.html">
+      «
+    </a>
+    
+    <div class="col-xs-10 ">
+      <div class="text-center">
+        <h2 class="title">UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集</h2>
+      </div>
+      <hr />
+    </div>
+    
+  </div>
+  <div class="row post-metadata">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-6">
+            
+
+        </div>
+        <div class="col-md-6 text-right">
+          <div>
+            <span class="post-date">
+              Nov 10, 2023
+            </span>
+
+            
+
+            <br />
+            <span class="post-tags">
+                <span class="label label-success">UseGalaxyCN</span>
+              
+                <span class="label label-info">tools</span>
+              
+              
+            </span>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="news-content">
+        <p>2023-11-10，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 12 个工具。</p>
+
+<h2 id="tidyverse">TIDYVERSE</h2>
+
+<ul>
+  <li>Dplyr Arrange rows</li>
+  <li>Dplyr Count the observations</li>
+  <li>Dplyr Distinct keep unique rows</li>
+  <li>Dplyr Join two tables</li>
+  <li>Dplyr Join with one varibale</li>
+  <li>Dplyr Mutate create, modify, and delete columns</li>
+  <li>Dplyr Rename columns</li>
+  <li>Dplyr Select keep or drop columns</li>
+  <li>Dplyr Slice select rows by position</li>
+  <li>Dplyr Filter keep rows that match a condition</li>
+  <li>Tidyr Pivot Longer from wide</li>
+  <li>Tidyr Pivot Wider from long</li>
+</ul>
+
+<h2 id="dplyr-arrange-rows">Dplyr Arrange rows</h2>
+
+<p><code class="language-plaintext highlighter-rouge">arrange</code> 函数用于对数据框按照指定变量进行排序，可以根据一个或多个变量对数据进行升序或降序排列，帮助用户重新整理数据框中的观测顺序。</p>
+
+<h2 id="dplyr-count-the-observations">Dplyr Count the observations</h2>
+
+<p><code class="language-plaintext highlighter-rouge">count</code> 函数用于统计数据框中各个组的频数，可以对指定变量进行计数，得到每个类别的观测数目，支持根据需要对结果进行排序。</p>
+
+<h2 id="dplyr-distinct-keep-unique-rows">Dplyr Distinct keep unique rows</h2>
+
+<p><code class="language-plaintext highlighter-rouge">distinct</code> 函数用于去除数据框中的重复观测，仅保留唯一的观测。它可以基于指定的列对数据框进行去重操作，确保每个观测都是唯一的。</p>
+
+<h2 id="dplyr-join-two-tables">Dplyr Join two tables</h2>
+
+<p><code class="language-plaintext highlighter-rouge">join</code> 函数用于根据指定的键将两个数据框连接起来，可以根据共同的变量将数据框进行合并，支持多种连接操作，如内连接、左连接、右连接和外连接等。</p>
+
+<h2 id="dplyr-join-with-one-varibale">Dplyr Join with one varibale</h2>
+
+<p>同上。区别在于只用一个变量连接两个表。</p>
+
+<h2 id="dplyr-mutate-create-modify-and-delete-columns">Dplyr Mutate create, modify, and delete columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">mutate</code> 函数用于添加新变量或修改现有变量，能够基于已有数据创建新的变量列，支持对数据框进行实时的变量操作和修改。</p>
+
+<h2 id="dplyr-rename-columns">Dplyr Rename columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">rename</code> 函数用于重命名数据框中的变量名，能够快速修改变量的名称，使得数据的列名更符合用户的需求和习惯。</p>
+
+<h2 id="dplyr-select-keep-or-drop-columns">Dplyr Select keep or drop columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">select</code> 函数用于选择数据框中的特定列，可以保留感兴趣的变量，并且能够根据列名、位置或条件表达式进行灵活的变量选择操作。</p>
+
+<h2 id="dplyr-slice-select-rows-by-position">Dplyr Slice select rows by position</h2>
+
+<p><code class="language-plaintext highlighter-rouge">slice</code> 函数用于按行数进行切片，能够从数据框中提取特定的行，支持根据行数或行号选择需要的行，也支持使用负数表示从末尾开始计算的行数。</p>
+
+<h2 id="dplyr-filter-keep-rows-that-match-a-condition">Dplyr Filter keep rows that match a condition</h2>
+
+<p><code class="language-plaintext highlighter-rouge">filter</code> 函数用于根据条件筛选数据行，能够仅保留满足条件的观测，支持根据指定的条件表达式对数据框进行灵活的行筛选操作。</p>
+
+<h2 id="tidyr-pivot-longer-from-wide">Tidyr Pivot Longer from wide</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pivot_longer</code> 函数用于将宽格式数据转换为长格式数据，能够根据用户指定的列将数据框中的多个列整理成一对 “名-值” 对，便于进一步的分析和处理。</p>
+
+<h2 id="tidyr-pivot-wider-from-long">Tidyr Pivot Wider from long</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pivot_wider</code> 函数用于将长格式数据转换为宽格式数据，能够将数据框中的一列分成多个列，根据指定的列名进行展开，使得数据以更直观的宽格式形式呈现。</p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+<footer class="navbar-default">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <!--
+ -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <ul class="contact-info">
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-10-tool-update.md">Edit this page on GitHub</a></li> -->
+                    
+                    <!--
+                    
+                    
+                      <li><i class="fa fa-rss"></i>Subscribe <a href="/feed.xml">via RSS (UseGalaxy.eu Feed)</a></li>
+                    -->
+
+                    <div class="image-link">
+						<li><i class="fa fa-wechat"></i><a href="#">简说基因</a></li>
+						<div class="image-container">
+							<p>Galaxy平台最新消息，关注公众号：简说基因</p> <!-- 添加描述文字 -->
+							<img src="/assets/media/wechat-official.jpg" alt="图片描述">
+						 </div>
+					</div>
+
+					<div class="image-link">
+					    <li><i class="fa fa-qq"></i><a href="#">Galaxy中国交流群</a></li>
+					    <div class="image-container">
+						    <p>欢迎加入Galaxy中国交流群，群号：925694514</p> <!-- 添加描述文字 -->
+						    <img src="/assets/media/qq-group.jpg" alt="图片描述">
+					    </div>
+					</div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script async defer data-domain="galaxyproject.eu" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+  </body>
+</html>

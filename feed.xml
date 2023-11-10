@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-08T15:30:40+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云平台文本文件操作手册</title><link href="https://usegalaxy.github.io/posts/2023/11/08/training/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云平台文本文件操作手册" /><published>2023-11-08T00:00:00+00:00</published><updated>2023-11-08T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/08/training</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/08/training/"><![CDATA[<p>文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-10T02:50:43+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集</title><link href="https://usegalaxy.github.io/posts/2023/11/10/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集" /><published>2023-11-10T00:00:00+00:00</published><updated>2023-11-10T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/10/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/10/tool-update/"><![CDATA[<p>2023-11-10，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 12 个工具。</p>
+
+<h2 id="tidyverse">TIDYVERSE</h2>
+
+<ul>
+  <li>Dplyr Arrange rows</li>
+  <li>Dplyr Count the observations</li>
+  <li>Dplyr Distinct keep unique rows</li>
+  <li>Dplyr Join two tables</li>
+  <li>Dplyr Join with one varibale</li>
+  <li>Dplyr Mutate create, modify, and delete columns</li>
+  <li>Dplyr Rename columns</li>
+  <li>Dplyr Select keep or drop columns</li>
+  <li>Dplyr Slice select rows by position</li>
+  <li>Dplyr Filter keep rows that match a condition</li>
+  <li>Tidyr Pivot Longer from wide</li>
+  <li>Tidyr Pivot Wider from long</li>
+</ul>
+
+<h2 id="dplyr-arrange-rows">Dplyr Arrange rows</h2>
+
+<p><code class="language-plaintext highlighter-rouge">arrange</code> 函数用于对数据框按照指定变量进行排序，可以根据一个或多个变量对数据进行升序或降序排列，帮助用户重新整理数据框中的观测顺序。</p>
+
+<h2 id="dplyr-count-the-observations">Dplyr Count the observations</h2>
+
+<p><code class="language-plaintext highlighter-rouge">count</code> 函数用于统计数据框中各个组的频数，可以对指定变量进行计数，得到每个类别的观测数目，支持根据需要对结果进行排序。</p>
+
+<h2 id="dplyr-distinct-keep-unique-rows">Dplyr Distinct keep unique rows</h2>
+
+<p><code class="language-plaintext highlighter-rouge">distinct</code> 函数用于去除数据框中的重复观测，仅保留唯一的观测。它可以基于指定的列对数据框进行去重操作，确保每个观测都是唯一的。</p>
+
+<h2 id="dplyr-join-two-tables">Dplyr Join two tables</h2>
+
+<p><code class="language-plaintext highlighter-rouge">join</code> 函数用于根据指定的键将两个数据框连接起来，可以根据共同的变量将数据框进行合并，支持多种连接操作，如内连接、左连接、右连接和外连接等。</p>
+
+<h2 id="dplyr-join-with-one-varibale">Dplyr Join with one varibale</h2>
+
+<p>同上。区别在于只用一个变量连接两个表。</p>
+
+<h2 id="dplyr-mutate-create-modify-and-delete-columns">Dplyr Mutate create, modify, and delete columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">mutate</code> 函数用于添加新变量或修改现有变量，能够基于已有数据创建新的变量列，支持对数据框进行实时的变量操作和修改。</p>
+
+<h2 id="dplyr-rename-columns">Dplyr Rename columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">rename</code> 函数用于重命名数据框中的变量名，能够快速修改变量的名称，使得数据的列名更符合用户的需求和习惯。</p>
+
+<h2 id="dplyr-select-keep-or-drop-columns">Dplyr Select keep or drop columns</h2>
+
+<p><code class="language-plaintext highlighter-rouge">select</code> 函数用于选择数据框中的特定列，可以保留感兴趣的变量，并且能够根据列名、位置或条件表达式进行灵活的变量选择操作。</p>
+
+<h2 id="dplyr-slice-select-rows-by-position">Dplyr Slice select rows by position</h2>
+
+<p><code class="language-plaintext highlighter-rouge">slice</code> 函数用于按行数进行切片，能够从数据框中提取特定的行，支持根据行数或行号选择需要的行，也支持使用负数表示从末尾开始计算的行数。</p>
+
+<h2 id="dplyr-filter-keep-rows-that-match-a-condition">Dplyr Filter keep rows that match a condition</h2>
+
+<p><code class="language-plaintext highlighter-rouge">filter</code> 函数用于根据条件筛选数据行，能够仅保留满足条件的观测，支持根据指定的条件表达式对数据框进行灵活的行筛选操作。</p>
+
+<h2 id="tidyr-pivot-longer-from-wide">Tidyr Pivot Longer from wide</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pivot_longer</code> 函数用于将宽格式数据转换为长格式数据，能够根据用户指定的列将数据框中的多个列整理成一对 “名-值” 对，便于进一步的分析和处理。</p>
+
+<h2 id="tidyr-pivot-wider-from-long">Tidyr Pivot Wider from long</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pivot_wider</code> 函数用于将长格式数据转换为宽格式数据，能够将数据框中的一列分成多个列，根据指定的列名进行展开，使得数据以更直观的宽格式形式呈现。</p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-11-10，Galaxy生信云平台 UseGalaxy.cn 新增 12 个工具。]]></summary></entry><entry><title type="html">UseGalaxy.cn生信云平台文本文件操作手册</title><link href="https://usegalaxy.github.io/posts/2023/11/08/training/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云平台文本文件操作手册" /><published>2023-11-08T00:00:00+00:00</published><updated>2023-11-08T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/08/training</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/08/training/"><![CDATA[<p>文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。</p>
 
 <p>文本文件的操作贯穿生信数据处理的始终，甚至有人开玩笑说，搞生信分析，就是进行各种文件格式的转换。有时候确实可以这么说，因为现在有许多软件/包都写得非常完善了，只需要准备好相应的输入文件，一行代码即可完成分析。</p>
 
