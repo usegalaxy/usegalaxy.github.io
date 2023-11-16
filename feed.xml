@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-16T09:38:47+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</title><link href="https://usegalaxy.github.io/posts/2023/11/16/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）" /><published>2023-11-16T00:00:00+00:00</published><updated>2023-11-16T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/16/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/16/tool-update/"><![CDATA[<h2 id="功能描述">功能描述</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-16T09:46:47+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</title><link href="https://usegalaxy.github.io/posts/2023/11/16/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）" /><published>2023-11-16T00:00:00+00:00</published><updated>2023-11-16T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/16/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/16/tool-update/"><![CDATA[<h2 id="功能描述">功能描述</h2>
 
 <p>这个工具用于进行主成分分析（PCA, Principal Component Analysis），可生成出版级的图形。</p>
 
 <h2 id="工具位置">工具位置</h2>
 
-<p>[UseGalaxy.cn &gt; RNA-seq &gt; PCA plot with FactoMineR]https://usegalaxy.cn/?tool_id=plot_pca&amp;version=0.6()</p>
+<p><a href="https://usegalaxy.cn/?tool_id=plot_pca&amp;version=0.6">UseGalaxy.cn &gt; RNA-seq &gt; PCA plot with FactoMineR</a></p>
 
 <h2 id="数据准备">数据准备</h2>
 
