@@ -2,7 +2,7 @@
 #docker run -it --rm -v /ifs:/ifs -p 8090:8090 jekyll:website
 # or dk exec -it ba /bin/bash
 #cd /ifs/www/website/
-#jekyll build --trace
+#jekyll build --trace --incremental
 
 cd _site
 
