@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy 中国 | UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</title>
-  <meta property="og:title" content="UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）" />
-  <meta property="og:description" content="功能描述
+  <title>Galaxy 中国 | UseGalaxy.cn生信云|出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
+  <meta property="og:title" content="UseGalaxy.cn生信云|出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
+  <meta property="og:description" content="工具地址
 " />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
   <meta name="description" content="The European Galaxy Instance">
@@ -17,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/16/tool-update/">
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/20/tool-update/plain.html">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
 
@@ -26,75 +26,9 @@
   <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 </head>
 
-
-    
-    
-    
-
-  <body class="location-freiburg">
+  <body>
     <div id="wrap">
       <div id="main">
-        <div class="navbar">
-
-  <div class="container">
-    
-    
-
-    
-    
-    
-
-    
-
-    <div class="navbar-header">
-      <div class="navbar-brand">
-        
-        <img alt="galaxy eu logo" src="/assets/media/galaxy-eu-logo.inv.svg" style="height: 20px"/>
-        
-      </div>
-
-      <a class="navbar-brand" href="/" style="padding-left: 6px">
-        Galaxy 中国
-      </a>
-      
-        <span class="navbar-brand" style="color: white">
-        /
-        </span>
-        <a class="navbar-brand" href="https://usegalaxy.github.io/freiburg">
-          UseGalaxyCN
-        </a>
-      
-    </div>
-
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Member Sites <span class="caret"></span></a>
-             <ul class="dropdown-menu">
-              
-                <li>
-                  <a class="page-link" href="/freiburg/">UseGalaxyCN</a>
-                </li>
-              
-             </ul>
-           </li>
-
-          
-          
-            <li>
-              <a class="page-link" href="/freiburg/news">News</a>
-            </li>
-          
-            <li>
-              <a class="page-link" href="/freiburg/events">Events</a>
-            </li>
-          
-          
-        </ul>
-      </div>
-  </div>
-</div>
-
         <div class="container" id="maincontainer">
           
 
@@ -104,20 +38,16 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/11/10/tool-update/">
+    <a class="col-xs-1 text-center" href="/posts/2023/11/16/tool-update/plain.html">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</h2>
+        <h2 class="title">UseGalaxy.cn生信云|出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
       </div>
       <hr />
     </div>
-    
-    <a class="col-xs-1 text-center" href="/posts/2023/11/20/tool-update/">
-      »
-    </a>
     
   </div>
   <div class="row post-metadata">
@@ -130,7 +60,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Nov 16, 2023
+              Nov 20, 2023
             </span>
 
             
@@ -154,101 +84,120 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div class="news-content">
-        <h2 id="功能描述">功能描述</h2>
+        <h2 id="工具地址">工具地址</h2>
 
-<p>这个工具用于进行主成分分析（PCA, Principal Component Analysis），可生成出版级的图形。</p>
+<p>UseGalaxy &gt; Graph/Display Data &gt; 柱状图</p>
 
-<h2 id="工具位置">工具位置</h2>
+<h2 id="功能描述">功能描述</h2>
 
-<p><a href="https://usegalaxy.cn/?tool_id=plot_pca&amp;version=0.6">UseGalaxy.cn &gt; RNA-seq &gt; PCA plot with FactoMineR</a></p>
-
-<h2 id="数据准备">数据准备</h2>
-
-<h3 id="文件1矩阵文件">文件1：矩阵文件</h3>
+<p>这个工具可以绘制出版级柱状图，是 ggpubr 包的 barplot 工具的在线版。</p>
 
 <ul>
-  <li>第1列：特征，如基因。</li>
-  <li>第2 - 最后一列：样本的值，如表达量。
-<img src="/assets/img/231116-tool-update-pca-data-count.png" alt="" /></li>
+  <li>条形图通过垂直或水平的条形展示分类变量的分布（频数）。</li>
+  <li>横坐标表示分类，纵坐标表示频数，频数既可以事先计算好，也可以自动计算（不指定 Y 变量时）。</li>
 </ul>
 
-<h3 id="文件2样本信息">文件2：样本信息</h3>
-
-<ul>
-  <li>第1列：样本ID。</li>
-  <li>第2列：分组。
-<img src="/assets/img/231116-tool-update-pca-data-group.png" alt="" /></li>
-</ul>
-
-<h2 id="使用示例">使用示例</h2>
+<h2 id="测试数据">测试数据</h2>
 
 <blockquote>
-  <ul>
-    <li>默认参数</li>
-  </ul>
+  <p>Data libraries &gt; Table data &gt; ToothGrowth.tsv。</p>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-default.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-data.png" alt="" /></p>
+
+<h2 id="操作演示">操作演示</h2>
 
 <blockquote>
   <ul>
-    <li>高级设置
+    <li>数据表：ToothGrowth.tsv</li>
+    <li>位置美学：
       <ul>
-        <li>边界线形状：多边形</li>
+        <li>X 轴变量：dose</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-adv-poly.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-dose.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>高级设置
+    <li>重新运行上一步</li>
+    <li>位置美学：
       <ul>
-        <li>边界线形状：无边界线</li>
+        <li>Y 轴变量：len</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-adv-no.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-dose-len.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>颜色美学
+    <li>重新运行上一步</li>
+    <li>颜色美学：
       <ul>
-        <li>主题：theme_minimal</li>
+        <li>轮廓颜色：supp</li>
+        <li>填充颜色：supp</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-minimal.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>颜色美学
+    <li>重新运行上一步</li>
+    <li>高级设置：
       <ul>
-        <li>调色板为：JCO</li>
+        <li>dodge：dodge2</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-jco.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>图例设置
+    <li>重新运行上一步</li>
+    <li>高级设置：
       <ul>
-        <li>位置：right</li>
+        <li>添加元素：mean_se</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-legend-right.png" alt="" /></p>
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-mean_se.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>调色板：JCO</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>主题：theme_dark</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco-theme_dark.png" alt="" /></p>
 
 <h2 id="友情提示">友情提示</h2>
 
@@ -260,7 +209,8 @@
     </div>
   </div>
 
-  
+
+
 </section>
 
         </div>
@@ -287,7 +237,7 @@
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-11-16-tool-update.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-20-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                     <!--
                     

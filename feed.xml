@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-19T00:37:29+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</title><link href="https://usegalaxy.github.io/posts/2023/11/16/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）" /><published>2023-11-16T00:00:00+00:00</published><updated>2023-11-16T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/16/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/16/tool-update/"><![CDATA[<h2 id="功能描述">功能描述</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-20T13:59:32+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">UseGalaxy.cn生信云|出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title><link href="https://usegalaxy.github.io/posts/2023/11/20/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" /><published>2023-11-20T00:00:00+00:00</published><updated>2023-11-20T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/20/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/20/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
+
+<p>UseGalaxy &gt; Graph/Display Data &gt; 柱状图</p>
+
+<h2 id="功能描述">功能描述</h2>
+
+<p>这个工具可以绘制出版级柱状图，是 ggpubr 包的 barplot 工具的在线版。</p>
+
+<ul>
+  <li>条形图通过垂直或水平的条形展示分类变量的分布（频数）。</li>
+  <li>横坐标表示分类，纵坐标表示频数，频数既可以事先计算好，也可以自动计算（不指定 Y 变量时）。</li>
+</ul>
+
+<h2 id="测试数据">测试数据</h2>
+
+<blockquote>
+  <p>Data libraries &gt; Table data &gt; ToothGrowth.tsv。</p>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-data.png" alt="" /></p>
+
+<h2 id="操作演示">操作演示</h2>
+
+<blockquote>
+  <ul>
+    <li>数据表：ToothGrowth.tsv</li>
+    <li>位置美学：
+      <ul>
+        <li>X 轴变量：dose</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>位置美学：
+      <ul>
+        <li>Y 轴变量：len</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-len.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>轮廓颜色：supp</li>
+        <li>填充颜色：supp</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>高级设置：
+      <ul>
+        <li>dodge：dodge2</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>高级设置：
+      <ul>
+        <li>添加元素：mean_se</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-mean_se.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>调色板：JCO</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>主题：theme_dark</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco-theme_dark.png" alt="" /></p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[工具地址]]></summary></entry><entry><title type="html">UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）</title><link href="https://usegalaxy.github.io/posts/2023/11/16/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|出版级PCA美图，轻松拿捏（主成分分析利器，建议收藏备用）" /><published>2023-11-16T00:00:00+00:00</published><updated>2023-11-16T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/16/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/16/tool-update/"><![CDATA[<h2 id="功能描述">功能描述</h2>
 
 <p>这个工具用于进行主成分分析（PCA, Principal Component Analysis），可生成出版级的图形。</p>
 
@@ -92,7 +211,13 @@
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231116-tool-update-pca-legend-right.png" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[功能描述]]></summary></entry><entry><title type="html">UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集</title><link href="https://usegalaxy.github.io/posts/2023/11/10/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集" /><published>2023-11-10T00:00:00+00:00</published><updated>2023-11-10T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/10/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/10/tool-update/"><![CDATA[<p>2023-11-10，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 12 个工具。</p>
+<p><img src="/assets/img/231116-tool-update-pca-legend-right.png" alt="" /></p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[功能描述]]></summary></entry><entry><title type="html">UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集</title><link href="https://usegalaxy.github.io/posts/2023/11/10/tool-update/" rel="alternate" type="text/html" title="UseGalaxy.cn生信云|使用Tiverse优雅地处理数据集" /><published>2023-11-10T00:00:00+00:00</published><updated>2023-11-10T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/10/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/10/tool-update/"><![CDATA[<p>2023-11-10，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 12 个工具。</p>
 
 <h2 id="tidyverse">TIDYVERSE</h2>
 
@@ -1150,12 +1275,4 @@ https://zenodo.org/record/4494146/files/hg18_karyotype_withbands.txt
 
 <p>生信分析已经进入2.0时代，即云平台时代。</p>
 
-<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。]]></summary></entry><entry><title type="html">Galaxy 中国镜像</title><link href="https://usegalaxy.github.io/posts/2023/10/21/usegalaxy-cn/" rel="alternate" type="text/html" title="Galaxy 中国镜像" /><published>2023-10-21T00:00:00+00:00</published><updated>2023-10-21T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/10/21/usegalaxy-cn</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/10/21/usegalaxy-cn/"><![CDATA[<p>Galaxy 中国镜像是 Galaxy 云计算平台的一个中国实例。平台具有以下特点：</p>
-<ul>
-  <li>大量在线工具免费使用</li>
-  <li>无需安装，用完即走</li>
-  <li>活跃的用户社区</li>
-  <li>按需培训的能力</li>
-</ul>
-
-<p>开始使用：<a href="usegalaxy.cn">usegalaxy.cn</a></p>]]></content><author><name></name></author><category term="training" /><summary type="html"><![CDATA[Galaxy 中国镜像是 Galaxy 云计算平台的一个中国实例。平台具有以下特点： 大量在线工具免费使用 无需安装，用完即走 活跃的用户社区 按需培训的能力]]></summary></entry></feed>
+<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[临床基线表是在临床研究中用于记录和收集患者初始诊断、治疗前的基本信息以及其他关键变量的表格或数据库。这些基本信息通常被用作研究的起点，用于建立患者的初始状态或基线状态。]]></summary></entry></feed>
