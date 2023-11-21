@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy 中国 | 出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
-  <meta property="og:title" content="出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
+  <title>Galaxy 中国 | 出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
+  <meta property="og:title" content="出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
   <meta property="og:description" content="工具地址
 " />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
@@ -17,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/20/tool-update/">
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/21/tool-update/plain.html">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
 
@@ -26,75 +26,9 @@
   <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 </head>
 
-
-    
-    
-    
-
-  <body class="location-freiburg">
+  <body>
     <div id="wrap">
       <div id="main">
-        <div class="navbar">
-
-  <div class="container">
-    
-    
-
-    
-    
-    
-
-    
-
-    <div class="navbar-header">
-      <div class="navbar-brand">
-        
-        <img alt="galaxy eu logo" src="/assets/media/galaxy-eu-logo.inv.svg" style="height: 20px"/>
-        
-      </div>
-
-      <a class="navbar-brand" href="/" style="padding-left: 6px">
-        Galaxy 中国
-      </a>
-      
-        <span class="navbar-brand" style="color: white">
-        /
-        </span>
-        <a class="navbar-brand" href="https://usegalaxy.github.io/freiburg">
-          UseGalaxyCN
-        </a>
-      
-    </div>
-
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-           <li class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Member Sites <span class="caret"></span></a>
-             <ul class="dropdown-menu">
-              
-                <li>
-                  <a class="page-link" href="/freiburg/">UseGalaxyCN</a>
-                </li>
-              
-             </ul>
-           </li>
-
-          
-          
-            <li>
-              <a class="page-link" href="/freiburg/news">News</a>
-            </li>
-          
-            <li>
-              <a class="page-link" href="/freiburg/events">Events</a>
-            </li>
-          
-          
-        </ul>
-      </div>
-  </div>
-</div>
-
         <div class="container" id="maincontainer">
           
 
@@ -104,20 +38,16 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/11/16/tool-update/">
+    <a class="col-xs-1 text-center" href="/posts/2023/11/20/tool-update/plain.html">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">出版级柱状图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
+        <h2 class="title">出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
       </div>
       <hr />
     </div>
-    
-    <a class="col-xs-1 text-center" href="/posts/2023/11/21/tool-update/">
-      »
-    </a>
     
   </div>
   <div class="row post-metadata">
@@ -130,7 +60,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Nov 20, 2023
+              Nov 21, 2023
             </span>
 
             
@@ -156,26 +86,24 @@
       <div class="news-content">
         <h2 id="工具地址">工具地址</h2>
 
-<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; 柱状图</p>
+<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; 箱线图。</p>
 
 <h2 id="功能描述">功能描述</h2>
 
-<p>这个工具可以绘制出版级柱状图，是 ggpubr 包的 barplot 工具的在线版。</p>
+<p>这个工具可以绘制出版级箱线图，是在线版的 ggpubr::boxplot 工具。</p>
 
 <ul>
-  <li>条形图通过垂直或水平的条形展示分类变量的分布（频数）。</li>
-  <li>横坐标表示分类，纵坐标表示频数，频数既可以事先计算好，也可以自动计算（不指定 Y 变量时）。</li>
+  <li>箱线图是一种数据可视化工具，用于展示数据集的分布情况和统计特征。它通过显示数据的中位数、上下四分位数、最小值和最大值，以及异常值，提供了对数据集整体分布的直观认识。</li>
+  <li>箱线图的中央矩形代表数据集的四分位数范围，箱子的上下边缘延伸到最大和最小观测值，通过观察箱线图，我们可以识别出数据的集中趋势、离散程度，以及是否存在异常值。</li>
 </ul>
 
 <h2 id="测试数据">测试数据</h2>
 
-<blockquote>
-  <p>Data libraries &gt; Table data &gt; ToothGrowth.tsv。</p>
-</blockquote>
+<p>数据共享 &gt; 数据库 &gt; Table data &gt; ToothGrowth.tsv</p>
 
 <p><img src="/assets/img/231120-tool-update-barplot-data.png" alt="" /></p>
 
-<h2 id="操作演示">操作演示</h2>
+<h2 id="实战演示">实战演示</h2>
 
 <blockquote>
   <ul>
@@ -183,69 +111,100 @@
     <li>位置美学：
       <ul>
         <li>X 轴变量：dose</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231120-tool-update-barplot-dose.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步</li>
-    <li>位置美学：
-      <ul>
         <li>Y 轴变量：len</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-len.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-dose-len.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步</li>
-    <li>颜色美学：
+    <li>重新运行上一步（右边 History 中，单击上一步输出的结果文件名称，点击“向右转圈的箭头”，下同。）</li>
+    <li>统计检验：
       <ul>
-        <li>轮廓颜色：supp</li>
-        <li>填充颜色：supp</li>
+        <li>添加全局 P 值：YES</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-global-p.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步</li>
+    <li>重新运行上一步。</li>
+    <li>统计检验：
+      <ul>
+        <li>添加分组 P 值：YES</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231121-tool-update-boxplot-local-p.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步。</li>
+    <li>统计检验：
+      <ul>
+        <li>全局 P 值 Y 坐标（与数据的单位一致）：42</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231121-tool-update-boxplot-p-y.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步。</li>
+    <li>统计检验：
+      <ul>
+        <li>分组比较 P 值显示方式：p 值</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231121-tool-update-boxplot-p-show.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步。</li>
+    <li>统计检验：
+      <ul>
+        <li>全局 P 值 Y 坐标（与数据的单位一致）：10</li>
+      </ul>
+    </li>
     <li>高级设置：
       <ul>
-        <li>dodge：dodge2</li>
+        <li>X 轴分组顺序：2, 1, 0.5</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-order.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步</li>
+    <li>重新运行上一步。</li>
     <li>高级设置：
       <ul>
-        <li>添加元素：mean_se</li>
+        <li>添加元素：jitter</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-mean_se.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-jitter.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步</li>
+    <li>重新运行上一步。</li>
     <li>颜色美学：
       <ul>
         <li>调色板：JCO</li>
@@ -254,20 +213,20 @@
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-jco.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步</li>
-    <li>颜色美学：
+    <li>重新运行上一步。</li>
+    <li>位置美学：
       <ul>
-        <li>主题：theme_dark</li>
+        <li>分面：supp</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231120-tool-update-barplot-dose-color-fill-supp-dodge2-jco-theme_dark.png" alt="" /></p>
+<p><img src="/assets/img/231121-tool-update-boxplot-facet.png" alt="" /></p>
 
 <h2 id="友情提示">友情提示</h2>
 
@@ -279,7 +238,8 @@
     </div>
   </div>
 
-  
+
+
 </section>
 
         </div>
@@ -306,7 +266,7 @@
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-11-20-tool-update.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-21-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                     <!--
                     
