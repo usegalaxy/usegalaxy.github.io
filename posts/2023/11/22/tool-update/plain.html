@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy 中国 | 出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
-  <meta property="og:title" content="出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
+  <title>Galaxy 中国 | 出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
+  <meta property="og:title" content="出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
   <meta property="og:description" content="工具地址
 " />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
@@ -17,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/21/tool-update/plain.html">
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/22/tool-update/plain.html">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
 
@@ -38,20 +38,16 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/11/20/tool-update/plain.html">
+    <a class="col-xs-1 text-center" href="/posts/2023/11/21/tool-update/plain.html">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">出版级箱线图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
+        <h2 class="title">出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
       </div>
       <hr />
     </div>
-    
-    <a class="col-xs-1 text-center" href="/posts/2023/11/22/tool-update/plain.html">
-      »
-    </a>
     
   </div>
   <div class="row post-metadata">
@@ -64,7 +60,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Nov 21, 2023
+              Nov 22, 2023
             </span>
 
             
@@ -90,20 +86,20 @@
       <div class="news-content">
         <h2 id="工具地址">工具地址</h2>
 
-<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; 箱线图。</p>
+<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; Ggpubr 小提琴图</p>
 
 <h2 id="功能描述">功能描述</h2>
 
-<p>这个工具可以绘制出版级箱线图，是在线版的 ggpubr::boxplot 工具。</p>
+<p>这个工具可以绘制出版级小提琴图，是在线版的 ggpubr::ggviolin 工具。</p>
 
 <ul>
-  <li>箱线图是一种数据可视化工具，用于展示数据集的分布情况和统计特征。它通过显示数据的中位数、上下四分位数、最小值和最大值，以及异常值，提供了对数据集整体分布的直观认识。</li>
-  <li>箱线图的中央矩形代表数据集的四分位数范围，箱子的上下边缘延伸到最大和最小观测值，通过观察箱线图，我们可以识别出数据的集中趋势、离散程度，以及是否存在异常值。</li>
+  <li>小提琴图是一种统计学中常用的图表，用于展示数据分布及离散程度。</li>
+  <li>图形中的细长箱体表示数据分布，中间的线表示中位数，有助于观察数据的集中趋势和散布情况。</li>
 </ul>
 
 <h2 id="测试数据">测试数据</h2>
 
-<p>数据共享 &gt; 数据库 &gt; Table data &gt; ToothGrowth.tsv</p>
+<p>测试数据：数据共享 &gt; 数据库 &gt; Table data &gt; ToothGrowth.tsv。</p>
 
 <p><img src="/assets/img/231120-tool-update-barplot-data.png" alt="" /></p>
 
@@ -121,116 +117,57 @@
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231121-tool-update-boxplot-dose-len.png" alt="" /></p>
+<p><img src="/assets/img/231122-tool-update-violin-dose-len.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步（右边 History 中，单击上一步输出的结果文件名称，点击“向右转圈的箭头”，下同。）</li>
+    <li>重新运行上一步（右边 History 中，单击上一步输出的结果文件名称，点击”向右转圈的箭头”，下同。）</li>
     <li>统计检验：
       <ul>
         <li>添加全局 P 值：YES</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231121-tool-update-boxplot-global-p.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步。</li>
-    <li>统计检验：
-      <ul>
         <li>添加分组 P 值：YES</li>
+        <li>分组比较 P 值显示方式：p 值
+全局 P 值 Y 坐标（与数据的单位一致）：42</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231121-tool-update-boxplot-local-p.png" alt="" /></p>
+<p><img src="/assets/img/231122-tool-update-violin-statistic.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步。</li>
-    <li>统计检验：
+    <li>重新运行上一步
       <ul>
-        <li>全局 P 值 Y 坐标（与数据的单位一致）：42</li>
+        <li>颜色美学：</li>
+        <li>主题：theme_light</li>
+        <li>调色板：LANCET</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231121-tool-update-boxplot-p-y.png" alt="" /></p>
+<p><img src="/assets/img/231122-tool-update-violin-color.png" alt="" /></p>
 
 <blockquote>
   <ul>
-    <li>重新运行上一步。</li>
-    <li>统计检验：
+    <li>重新运行上一步</li>
+    <li>坐标设置：
       <ul>
-        <li>分组比较 P 值显示方式：p 值</li>
+        <li>坐标范围：Use-defined axis scales
+          <ul>
+            <li>X 坐标最小值：1</li>
+            <li>X 坐标最大值：3</li>
+            <li>Y 坐标最小值：0</li>
+            <li>Y 坐标最大值：50</li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231121-tool-update-boxplot-p-show.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步。</li>
-    <li>统计检验：
-      <ul>
-        <li>全局 P 值 Y 坐标（与数据的单位一致）：10</li>
-      </ul>
-    </li>
-    <li>高级设置：
-      <ul>
-        <li>X 轴分组顺序：2, 1, 0.5</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231121-tool-update-boxplot-order.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步。</li>
-    <li>高级设置：
-      <ul>
-        <li>添加元素：jitter</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231121-tool-update-boxplot-jitter.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步。</li>
-    <li>颜色美学：
-      <ul>
-        <li>调色板：JCO</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231121-tool-update-boxplot-jco.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步。</li>
-    <li>位置美学：
-      <ul>
-        <li>分面：supp</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231121-tool-update-boxplot-facet.png" alt="" /></p>
+<p><img src="/assets/img/231122-tool-update-violin-axis.png" alt="" /></p>
 
 <h2 id="友情提示">友情提示</h2>
 
@@ -270,7 +207,7 @@
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-21-tool-update.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-11-22-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                     <!--
                     
