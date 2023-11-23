@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Galaxy 中国 | 出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
-  <meta property="og:title" content="出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
+  <title>Galaxy 中国 | 出版级散点图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title>
+  <meta property="og:title" content="出版级散点图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" />
   <meta property="og:description" content="工具地址
 " />
   <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
@@ -17,7 +17,7 @@
 
 
 
-  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/22/tool-update/">
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/11/23/tool-update/">
   <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
   <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
 
@@ -104,20 +104,16 @@
 <section id="news-page">
   <div class="row news-header-row">
     
-    <a class="col-xs-1 text-center" href="/posts/2023/11/21/tool-update/">
+    <a class="col-xs-1 text-center" href="/posts/2023/11/22/tool-update/">
       «
     </a>
     
     <div class="col-xs-10 ">
       <div class="text-center">
-        <h2 class="title">出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
+        <h2 class="title">出版级散点图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</h2>
       </div>
       <hr />
     </div>
-    
-    <a class="col-xs-1 text-center" href="/posts/2023/11/23/tool-update/">
-      »
-    </a>
     
   </div>
   <div class="row post-metadata">
@@ -130,7 +126,7 @@
         <div class="col-md-6 text-right">
           <div>
             <span class="post-date">
-              Nov 22, 2023
+              Nov 23, 2023
             </span>
 
             
@@ -156,80 +152,47 @@
       <div class="news-content">
         <h2 id="工具地址">工具地址</h2>
 
-<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; Ggpubr 小提琴图</p>
+<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; Ggpubr 散点图</p>
 
 <h2 id="功能描述">功能描述</h2>
 
-<p>这个工具可以绘制出版级小提琴图，是在线版的 ggpubr::ggviolin 工具。</p>
+<p>这个工具可以绘制出版级散点图，是在线版的 ggpubr::ggscatter 工具。</p>
 
 <ul>
-  <li>小提琴图是一种统计学中常用的图表，用于展示数据分布及离散程度。</li>
-  <li>图形中的细长箱体表示数据分布，中间的线表示中位数，有助于观察数据的集中趋势和散布情况。</li>
+  <li>散点图是一种图表，用于展示两个变量之间的关系。图中的每个点代表数据集中的一个观测值，横轴和纵轴分别表示两个变量。</li>
+  <li>通过观察点的分布，可以识别变量之间的模式、趋势或相关性。</li>
 </ul>
 
 <h2 id="测试数据">测试数据</h2>
 
-<p>测试数据：数据共享 &gt; 数据库 &gt; Table data &gt; ToothGrowth.tsv。</p>
+<p>测试数据：数据共享 &gt; 数据库 &gt; Table data &gt; mtcars.tsv。</p>
 
-<p><img src="/assets/img/231120-tool-update-barplot-data.png" alt="" /></p>
+<p><img src="/assets/img/20231123-tool-update-scatter-data.png" alt="" /></p>
 
 <h2 id="实战演示">实战演示</h2>
 
 <blockquote>
   <ul>
-    <li>数据表：ToothGrowth.tsv</li>
+    <li>数据表：mtcars.tsv</li>
     <li>位置美学：
       <ul>
-        <li>X 轴变量：dose</li>
-        <li>Y 轴变量：len</li>
+        <li>X 轴变量：wt</li>
+        <li>Y 轴变量：mpg</li>
       </ul>
     </li>
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231122-tool-update-violin-dose-len.png" alt="" /></p>
+<p><img src="/assets/img/20231123-tool-update-scatter-wt-mpg.png" alt="" /></p>
 
 <blockquote>
   <ul>
     <li>重新运行上一步（右边 History 中，单击上一步输出的结果文件名称，点击”向右转圈的箭头”，下同。）</li>
-    <li>统计检验：
+    <li>高级设置：
       <ul>
-        <li>添加全局 P 值：YES</li>
-        <li>添加分组 P 值：YES</li>
-        <li>分组比较 P 值显示方式：p 值
-全局 P 值 Y 坐标（与数据的单位一致）：42</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231122-tool-update-violin-statistic.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步
-      <ul>
-        <li>颜色美学：</li>
-        <li>主题：theme_light</li>
-        <li>调色板：LANCET</li>
-      </ul>
-    </li>
-  </ul>
-</blockquote>
-
-<p><img src="/assets/img/231122-tool-update-violin-color.png" alt="" /></p>
-
-<blockquote>
-  <ul>
-    <li>重新运行上一步</li>
-    <li>坐标设置：
-      <ul>
-        <li>坐标范围：Use-defined axis scales
+        <li>显示相关系数:
           <ul>
-            <li>X 坐标最小值：1</li>
-            <li>X 坐标最大值：3</li>
-            <li>Y 坐标最小值：0</li>
-            <li>Y 坐标最大值：50</li>
+            <li>X 坐标: 4</li>
           </ul>
         </li>
       </ul>
@@ -237,7 +200,30 @@
   </ul>
 </blockquote>
 
-<p><img src="/assets/img/231122-tool-update-violin-axis.png" alt="" /></p>
+<p><img src="/assets/img/20231123-tool-update-scatter-cor-label_x_4.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>轮廓颜色（可以是变量、颜色名称或颜色值）：cyl</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-cor-color-cyl.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>图例设置：
+位置：right</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-legend-right.png" alt="" /></p>
 
 <h2 id="友情提示">友情提示</h2>
 
@@ -276,7 +262,7 @@
         <div class="row">
             <div class="col-lg-12" style="text-align:center">
                 <ul class="contact-info">
-                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-11-22-tool-update.md">Edit this page on GitHub</a></li> -->
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts/2023-11-23-tool-update.md">Edit this page on GitHub</a></li> -->
                     
                     <!--
                     

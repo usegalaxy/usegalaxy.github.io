@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-22T04:01:09+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title><link href="https://usegalaxy.github.io/posts/2023/11/22/tool-update/" rel="alternate" type="text/html" title="出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/22/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/22/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-11-23T14:47:50+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">出版级散点图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title><link href="https://usegalaxy.github.io/posts/2023/11/23/tool-update/" rel="alternate" type="text/html" title="出版级散点图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" /><published>2023-11-23T00:00:00+00:00</published><updated>2023-11-23T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/23/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/23/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
+
+<p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; Ggpubr 散点图</p>
+
+<h2 id="功能描述">功能描述</h2>
+
+<p>这个工具可以绘制出版级散点图，是在线版的 ggpubr::ggscatter 工具。</p>
+
+<ul>
+  <li>散点图是一种图表，用于展示两个变量之间的关系。图中的每个点代表数据集中的一个观测值，横轴和纵轴分别表示两个变量。</li>
+  <li>通过观察点的分布，可以识别变量之间的模式、趋势或相关性。</li>
+</ul>
+
+<h2 id="测试数据">测试数据</h2>
+
+<p>测试数据：数据共享 &gt; 数据库 &gt; Table data &gt; mtcars.tsv。</p>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-data.png" alt="" /></p>
+
+<h2 id="实战演示">实战演示</h2>
+
+<blockquote>
+  <ul>
+    <li>数据表：mtcars.tsv</li>
+    <li>位置美学：
+      <ul>
+        <li>X 轴变量：wt</li>
+        <li>Y 轴变量：mpg</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-wt-mpg.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步（右边 History 中，单击上一步输出的结果文件名称，点击”向右转圈的箭头”，下同。）</li>
+    <li>高级设置：
+      <ul>
+        <li>显示相关系数:
+          <ul>
+            <li>X 坐标: 4</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-cor-label_x_4.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>颜色美学：
+      <ul>
+        <li>轮廓颜色（可以是变量、颜色名称或颜色值）：cyl</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-cor-color-cyl.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>重新运行上一步</li>
+    <li>图例设置：
+位置：right</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/20231123-tool-update-scatter-legend-right.png" alt="" /></p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[工具地址]]></summary></entry><entry><title type="html">出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）</title><link href="https://usegalaxy.github.io/posts/2023/11/22/tool-update/" rel="alternate" type="text/html" title="出版级小提琴图绘制，轻松拿捏（初学者友好的R包ggpubr在线版）" /><published>2023-11-22T00:00:00+00:00</published><updated>2023-11-22T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/22/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/22/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
 
 <p>Galaxy中国（UseGalaxy.cn）&gt; Graph/Display Data &gt; Ggpubr 小提琴图</p>
 
@@ -1255,73 +1334,4 @@ https://zenodo.org/record/4494146/files/hg18_karyotype_withbands.txt
 
 <h2 id="最后">最后</h2>
 
-<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-11-04，Galaxy生信云平台 UseGalaxy.cn 新增 2 个工具。]]></summary></entry><entry><title type="html">新增生存曲线绘制、肿瘤基因通路注释工具</title><link href="https://usegalaxy.github.io/posts/2023/10/26/tool-update/" rel="alternate" type="text/html" title="新增生存曲线绘制、肿瘤基因通路注释工具" /><published>2023-10-26T00:00:00+00:00</published><updated>2023-10-26T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/10/26/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/10/26/tool-update/"><![CDATA[<p>2023-10-26，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增 2 个工具。</p>
-
-<h2 id="cancer-research">Cancer Research</h2>
-
-<ul>
-  <li>生存曲线 Kaplan-Meier curve ploter</li>
-  <li>肿瘤通路注释 Gene to oncogenic pathway mapper</li>
-</ul>
-
-<h2 id="部分结果展示">部分结果展示</h2>
-
-<h3 id="生存曲线-kaplan-meier-curve-ploter">生存曲线 Kaplan-Meier curve ploter</h3>
-
-<p>生存曲线-不分层：</p>
-
-<p><img src="/assets/img/231026-tool-update-survival.png" alt="" /></p>
-
-<p>生存曲线-分层：</p>
-
-<p><img src="/assets/img/231026-tool-update-survival-strata.png" alt="" /></p>
-
-<p>生存分析是一种统计方法，用于评估特定群体在一段特定时间内存活或生存的概率。它通常用于研究患者的生存率或存活时间，特别是在临床医学和流行病学研究中。生存分析主要涉及观察患者或个体在一定时间内是否存活，并在研究过程中考虑各种可能的因素，如治疗方法、药物治疗、生活方式等。</p>
-
-<h3 id="肿瘤通路注释-gene-to-oncogenic-pathway-mapper">肿瘤通路注释 Gene to oncogenic pathway mapper</h3>
-
-<p>指定基因所在的列，本工具可以将基因名转换成通路名（TCGA 10 条oncogenic通路和 TCGA 10 条DDR通路）。</p>
-
-<p>注释前：</p>
-
-<p><img src="/assets/img/231026-tool-update-gene2pathway-before.png" alt="" /></p>
-
-<p>注释后：</p>
-
-<p><img src="/assets/img/231026-tool-update-gene2pathway-after.png" alt="" /></p>
-
-<p><strong>TCGA 10 条 oncogenic 通路：</strong></p>
-
-<ul>
-  <li>Cell_Cycle</li>
-  <li>Hippo</li>
-  <li>MYC</li>
-  <li>NOTCH</li>
-  <li>NRF2</li>
-  <li>PI3K</li>
-  <li>TGF_Beta</li>
-  <li>RTK_RAS</li>
-  <li>TP53</li>
-  <li>WNT</li>
-</ul>
-
-<p><strong>TCGA 10 条 DDR 通路：</strong></p>
-
-<ul>
-  <li>BER</li>
-  <li>DR</li>
-  <li>NHEJ</li>
-  <li>NER</li>
-  <li>MMR</li>
-  <li>HR</li>
-  <li>TLS</li>
-  <li>FA</li>
-  <li>NP</li>
-  <li>Other</li>
-</ul>
-
-<h2 id="最后">最后</h2>
-
-<p>谁不想点点鼠标就把活儿干了，早点下班不好吗？</p>
-
-<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-10-26，Galaxy生信云平台 UseGalaxy.cn 新增 2 个工具。]]></summary></entry></feed>
+<p>Galaxy生信云平台 <a href="https://usegalaxy.cn">usegalaxy.cn</a> 致力于降低生信分析门槛，将许多常见的生信分析都放到云上，用户无需安装本地软件或R包，只需要上传数据，点击鼠标即可进行生信分析。</p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-11-04，Galaxy生信云平台 UseGalaxy.cn 新增 2 个工具。]]></summary></entry></feed>
