@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Galaxy 中国 | 上传数据，轻松分析 | 云上转录组标准分析流程使用指南</title>
+  <meta property="og:title" content="上传数据，轻松分析 | 云上转录组标准分析流程使用指南" />
+  <meta property="og:description" content="工具地址
+" />
+  <meta property="og:image" content="/assets/media/galaxy-eu-logo.512.png" />
+  <meta name="description" content="The European Galaxy Instance">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+
+
+
+  <link rel="canonical" href="https://usegalaxy.github.io/posts/2023/12/14/tool-update/plain.html">
+  <link rel="shortcut icon" href="/assets/media/galaxy-eu-logo.64.png" type="image/x-icon" />
+  <link rel="alternate" type="application/rss+xml" title="Galaxy 中国" href="/feed.xml">
+
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="/assets/js/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script src="/assets/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <div class="container" id="maincontainer">
+          
+
+
+
+
+<section id="news-page">
+  <div class="row news-header-row">
+    
+    <a class="col-xs-1 text-center" href="/posts/2023/11/24/tool-update/plain.html">
+      «
+    </a>
+    
+    <div class="col-xs-10 ">
+      <div class="text-center">
+        <h2 class="title">上传数据，轻松分析 | 云上转录组标准分析流程使用指南</h2>
+      </div>
+      <hr />
+    </div>
+    
+  </div>
+  <div class="row post-metadata">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-md-6">
+            
+
+        </div>
+        <div class="col-md-6 text-right">
+          <div>
+            <span class="post-date">
+              Dec 14, 2023
+            </span>
+
+            
+
+            <br />
+            <span class="post-tags">
+                <span class="label label-success">UseGalaxyCN</span>
+              
+                <span class="label label-info">tools</span>
+              
+              
+            </span>
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="news-content">
+        <h2 id="工具地址">工具地址</h2>
+
+<p>Galaxy中国（UseGalaxy.cn）&gt; RNA ANALYSIS TOOLS &gt; Standard Analysis &gt; 有参转录组标准分析</p>
+
+<h2 id="功能描述">功能描述</h2>
+
+<p>本工具用于转录组二代测序数据的标准分析，可生成表达量矩阵和测序数据质控结果。</p>
+
+<hr />
+
+<p>这是一套非常流行的转录组定量分析流程，即 Hisat2 + Stringtie 经典组合，其步骤为：</p>
+
+<ol>
+  <li>hisat2，将经过质控得到的 Clean data，比对到参考基因组上；</li>
+  <li>samblaster，去除PCR或光学重复;</li>
+  <li>samtools，去除不合格的比对序列，将 SAM 文件转换成 BAM 文件；</li>
+  <li>stringtie，结合 hisat2 得到的比对文件（BAM）和基因组注释文件（GTF），进行定量分析，得到每个样本的表达量文件（FPKM / TPM）；</li>
+  <li>prepDE.py，将 FPTM / TPM 转化为 Counts 计数的表达量矩阵，用于后续差异基因等分析。</li>
+</ol>
+
+<p><strong>TIPs：</strong></p>
+<ul>
+  <li>原始数据处理，需要大量计算资源（按需付费），请联系管理员配置（ 微信：ilovebtit ）。</li>
+  <li>所有样本并行处理，运算时间跟数据量最大的那个样本有关，提交任务后请耐心等待。</li>
+</ul>
+
+<h2 id="操作步骤">操作步骤</h2>
+
+<h3 id="1-创建一个新的历史面板">1. 创建一个新的历史面板</h3>
+
+<p>在网站右侧的历史面板上方，点击 <strong>+</strong> 号，创建一个新的历史面板，可以为新面板取一个名字，如：Three Yeast Test。</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-create-history.png" alt="" /></p>
+
+<h3 id="2-数据准备">2. 数据准备</h3>
+
+<h4 id="21-共享数据的使用方法">2.1 共享数据的使用方法</h4>
+
+<p>如果使用测试数据，可以在网站上方菜单栏，找到：</p>
+
+<blockquote>
+  <ul>
+    <li>数据共享 &gt; 数据库 &gt; RNA-seq &gt; Three Yeast</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-share-database.png" alt="" /></p>
+
+<p>可以看到6个Fastq文件，是3个酵母样本的双端测序数据（抽样数据用于工具测试） 。</p>
+
+<blockquote>
+  <ul>
+    <li>全选6个Fastq文件。</li>
+    <li>点击上方 <strong>Add to History</strong> 按钮，点击 <strong>as Datasets</strong>，将数据添加到刚才新建的历史面板。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-three-yeast-select-all.png" alt="" /></p>
+
+<p>回到网站主页，可以在历史面板中看见刚才添加的6个Fastq文件：</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-three-yeast-add-to-history.png" alt="" /></p>
+
+<p>至此我们学习了添加共享数据到历史面板的方法。</p>
+
+<h4 id="22-自有数据的上传方法">2.2 自有数据的上传方法</h4>
+
+<p>我们再来看看如何上传自己的数据，同样，增加一个新的历史面板，并为其取一个有意义的名称，如 RNAseq Test Using Tree Yeast。</p>
+
+<blockquote>
+  <ul>
+    <li>点击网站左侧的 <strong>Upload Data</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-upload-data.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>点击 <strong>选择本地磁盘文件</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-upload-data2.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>选择要上传的Fastq文件（可以多选），点击 <strong>打开</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-upload-data-select.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>回到上传工具界面，点击<strong>开始</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-upload-data-ready.png" alt="" /></p>
+
+<ul>
+  <li>点击 <strong>Close</strong> 等待上传完成。历史面板中的文件名都变成绿色后，表示上传完成。</li>
+</ul>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-upload-data-finish.png" alt="" /></p>
+
+<h3 id="3-制作-list-of-pairs">3. 制作 List of Pairs</h3>
+
+<p>放松，不要被概念吓倒，其实就是把所有Fastq文件的文件名放到一个列表中。</p>
+
+<blockquote>
+  <ul>
+    <li>点击历史面板中的 <strong>选择按钮</strong>，然后点击 <strong>Select All</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-history-select.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>然后占开下拉菜单，点击 <strong>Build List of Dataset Pairs</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-history-build-list-of-pairs.png" alt="" /></p>
+
+<p>在弹出的界面中，可以看到，6个Fastq文件已经自动配成3对了(来自于同一个样本的Read1 / Read2配对)。</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-history-paired.png" alt="" /></p>
+
+<blockquote>
+  <p>绿色部分：</p>
+  <ul>
+    <li>左边是 Read 1</li>
+    <li>右边是 Read 2</li>
+    <li>中间是样本名</li>
+  </ul>
+</blockquote>
+
+<p>这时候可以看到，中间的所有样本名最后都有一个 .fastq 后缀，说明自动配对得不完美，我们可以指定Fastq文件的后续，实现更加精确的配对。</p>
+
+<p><em>PS：当然这不是必须的，现在配对的情况已经可以用于后续分析了，我们去掉样本名中的.fastq后缀，仅仅是为了视觉上更简洁。</em></p>
+
+<blockquote>
+  <ul>
+    <li>点击 <strong>Unpair All</strong>，可以看到数据变成了未配对状态。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-history-unpaired.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>我们指定更精确的Fastq文件名后缀。在左侧文本框输入：_1.fastq.gz，在右侧文本框输入：_2.fastq.gz。然后点击 <strong>Auto-pair</strong>。</li>
+  </ul>
+</blockquote>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-history-repaired.png" alt="" /></p>
+
+<p>可以看到，现在匹配得更加精确。</p>
+
+<blockquote>
+  <ul>
+    <li>我们为数据集取一个名字，如：Theee Yeat RNA，点击 <strong>Create collection</strong> 即可。</li>
+  </ul>
+</blockquote>
+
+<p>回到历史面板，我们看到，原来的Fastq文件已经隐藏了，面板中出现了一个新的数据集：</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-three-yeast.png" alt="" /></p>
+
+<p>现在，我们可以正式运行转录组工具了。</p>
+
+<h4 id="4-运行工具">4. 运行工具</h4>
+
+<p>进入工具页面：</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-tool.png" alt="" /></p>
+
+<blockquote>
+  <ul>
+    <li>测序数据：选择刚才创建的数据集。</li>
+    <li>参考基因组：选择 <strong>Yeast (partial genome, just for test)</strong>，因为我们教程中用的是3个酵母样本测序数据的一小部分用于工具测试。</li>
+  </ul>
+</blockquote>
+
+<p>目前支持人类 GRCh37 / GRCh38 基因组。如果没有你需要的基因组，请联系管理员添加。</p>
+
+<blockquote>
+  <ul>
+    <li>Dry Run，该按钮为 <strong>Yes</strong>，会生成流程的任务脚本，不会执行，通常用于测试设置的完整性，在此保持默认值：<strong>No</strong></li>
+    <li>点击 <strong>Run Tool</strong>，等待分析结果。</li>
+  </ul>
+</blockquote>
+
+<h4 id="5-任务查看">5. 任务查看</h4>
+
+<p>历史面板中结果文件名的前面一直在转圈，说明任务正在运行。</p>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-tool-running.png" alt="" /></p>
+
+<p>若转圈停止：</p>
+
+<ul>
+  <li>结果文件名变为绿色，表示任务运行成功。</li>
+  <li>结果文件名变为红色，表示任务运行失败。</li>
+</ul>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-tool-finish.png" alt="" /></p>
+
+<p>最后：</p>
+
+<ul>
+  <li>点击文件旁的 <strong>眼睛</strong> 图标，可以查看文件内容。</li>
+  <li>点击文件名，待文件区域展开后，再点击 <strong>磁盘</strong> 图标，即可下载结果文件。</li>
+</ul>
+
+<p><img src="/assets/img/231214-tool-update-rnaseq-show-and-download.png" alt="" /></p>
+
+<h2 id="友情提示">友情提示</h2>
+
+<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
+
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+<footer class="navbar-default">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <!--
+ -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="text-align:center">
+                <ul class="contact-info">
+                    <!-- <li><i class="fa fa-github"></i><a href="https://github.com/usegalaxy-eu/website/tree/master/_posts_plain/2023-12-14-tool-update.md">Edit this page on GitHub</a></li> -->
+                    
+                    <!--
+                    
+                    
+                      <li><i class="fa fa-rss"></i>Subscribe <a href="/feed.xml">via RSS (UseGalaxy.eu Feed)</a></li>
+                    -->
+
+                    <div class="image-link">
+						<li><i class="fa fa-wechat"></i><a href="#">简说基因</a></li>
+						<div class="image-container">
+							<p>Galaxy平台最新消息，关注公众号：简说基因</p> <!-- 添加描述文字 -->
+							<img src="/assets/media/wechat-official.jpg" alt="图片描述">
+						 </div>
+					</div>
+
+					<div class="image-link">
+					    <li><i class="fa fa-qq"></i><a href="#">Galaxy中国交流群</a></li>
+					    <div class="image-container">
+						    <p>欢迎加入Galaxy中国交流群，群号：925694514</p> <!-- 添加描述文字 -->
+						    <img src="/assets/media/qq-group.jpg" alt="图片描述">
+					    </div>
+					</div>
+
+                   
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script async defer data-domain="galaxyproject.eu" src="https://plausible.galaxyproject.eu/js/plausible.js"></script>
+  </body>
+</html>
