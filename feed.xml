@@ -1,4 +1,242 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2023-12-14T09:55:50+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">上传数据，轻松分析 | 云上转录组标准分析流程使用指南</title><link href="https://usegalaxy.github.io/posts/2023/12/14/tool-update/" rel="alternate" type="text/html" title="上传数据，轻松分析 | 云上转录组标准分析流程使用指南" /><published>2023-12-14T00:00:00+00:00</published><updated>2023-12-14T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/12/14/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/12/14/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://usegalaxy.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://usegalaxy.github.io/" rel="alternate" type="text/html" /><updated>2024-01-05T17:01:26+00:00</updated><id>https://usegalaxy.github.io/feed.xml</id><title type="html">Galaxy 中国</title><subtitle>The European Galaxy Instance</subtitle><entry><title type="html">从零开始入门Galaxy生信云平台</title><link href="https://usegalaxy.github.io/posts/2024/01/05/training/" rel="alternate" type="text/html" title="从零开始入门Galaxy生信云平台" /><published>2024-01-05T00:00:00+00:00</published><updated>2024-01-05T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2024/01/05/training</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2024/01/05/training/"><![CDATA[<p>Galaxy是一个在线的生物信息云平台，目前已经上线了<strong>1300+</strong>生信实用工具，整合的一键式分析流程也在陆续上线中。这些工具/流程涵盖生物信息数据分析的方方面面，包括但不限于：</p>
+
+<ul>
+  <li>基因组数据分析</li>
+  <li>转录组数据分析（Bulk RNA-seq， Single Cell RNA-seq）</li>
+  <li>蛋白质组数据分析</li>
+  <li>癌症基因组测序研究</li>
+  <li>统计学 / 机器学习</li>
+  <li>生信绘图</li>
+</ul>
+
+<p>Galaxy能够进行生物信息学上下游全链条的数据分析，它可以服务于：</p>
+
+<ul>
+  <li>学生，学习生物信息学；</li>
+  <li>教师，讲授生物信息学；</li>
+  <li>科研人员，快速进行数据分析，无需繁琐的工具安装和流程搭建，把精力放到生物学意义的挖掘上。</li>
+</ul>
+
+<p>如何开始使用Galaxy？本文将介绍Galaxy中的关键任务：上传文件、使用工具、查看历史记录以及运行工作流程。</p>
+<h2 id="galaxy的外观"><strong>Galaxy的外观</strong></h2>
+
+<ol>
+  <li>打开任意浏览器（推荐Chrome）</li>
+  <li>输入网址：usegalaxy.cn</li>
+  <li>注册 &amp; 登录</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463509776-bf2eb8b7-da7b-48fc-8261-52df5eed6335.png#averageHue=%23fcfbfb&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u6529f740&amp;originHeight=567&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u5940cdda-f7f5-4a7e-a1e1-086ff81f246&amp;title=" alt="" />
+Galaxy主页分为四个面板，从左到右为：</p>
+
+<ul>
+  <li>活动栏</li>
+  <li>工具面板</li>
+  <li>视图面板</li>
+  <li>历史面板</li>
+</ul>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463509806-7bfe2cdc-045a-43c0-821a-29138a277306.png#averageHue=%23eccfa3&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ud03d64ae&amp;originHeight=527&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u5fbc32da-7960-430b-a5df-cee53de9548&amp;title=" alt="" />
+首次使用Galaxy时，历史面板中不会有文件。</p>
+<h2 id="关键操作"><strong>关键操作</strong></h2>
+<h3 id="命名历史面板"><strong>命名历史面板</strong></h3>
+
+<ol>
+  <li>来到右侧的<strong>历史</strong>面板</li>
+  <li>点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463509764-d1c26561-2f07-4535-a323-45e30195b7c6.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u3b15a481&amp;originHeight=16&amp;originWidth=16&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u167d9b7f-5c6a-49bd-8497-2dfddd77f44&amp;title=" alt="" /><strong>(Edit)</strong></li>
+  <li>输入一个新的名称，如：Learn To Use Galaxy</li>
+  <li>点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463509777-287189a7-3aa0-4929-a1cc-c640ea5e53d7.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u20b823b2&amp;originHeight=16&amp;originWidth=14&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=ub91ee7a9-2c8d-4fec-9b0a-f3566f4b85e&amp;title=" alt="" /><strong>保存</strong>
+    <ul>
+      <li>如果无法重命名，可能你没有登录，请登录后重试。
+        <h3 id="上传文件"><strong>上传文件</strong></h3>
+        <p>工具位于左侧的面板中。</p>
+      </li>
+    </ul>
+  </li>
+  <li>在<strong>工具</strong>面板的上方，点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463509772-d3b24b0e-b27c-4c4f-94ce-e60138024a63.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ufe14f7dc&amp;originHeight=16&amp;originWidth=16&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u36d7d147-6e80-4e43-aa1d-765e21a20a9&amp;title=" alt="" /><strong>Upload Data</strong></li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510237-7e47d064-ff1e-43bd-bcc8-c8d99dbe875b.png#averageHue=%23e7e9ec&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=uf3bb9b2e&amp;originHeight=522&amp;originWidth=750&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u64102718-068d-4d6e-925c-08fed990972&amp;title=" alt="" />
+这将打开一个界面。</p>
+
+<ol>
+  <li>点击 <strong>粘贴数据或链接</strong></li>
+  <li>粘贴一个文件地址：https://zenodo.org/record/582600/files/mutant_R1.fastq</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510370-d9c941c0-5815-454d-a7d4-fa3d505a3721.png#averageHue=%23e4e4e3&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u5cb103c1&amp;originHeight=653&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u679393eb-3db3-485d-94d4-2acb9cd3774&amp;title=" alt="" /></p>
+
+<ol>
+  <li>点击<strong>开始</strong></li>
+  <li>点击<strong>关闭</strong>
+    <ul>
+      <li>上传的文件位于当前历史中，称为数据集；</li>
+      <li>上传的文件将经历三个阶段：灰色（准备/排队）、黄色（正在处理）和绿色（上传成功）。</li>
+    </ul>
+  </li>
+</ol>
+
+<p>这是什么文件？</p>
+
+<ol>
+  <li>要查看文件的内容，可以点击数据集名称后面的<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463510339-d2313f83-0634-4208-9a44-d99541a5e31a.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ucc7817a1&amp;originHeight=16&amp;originWidth=18&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u41456534-b193-45db-8809-8aa58f7dbb1&amp;title=" alt="" /><strong>（eye）</strong></li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510340-4548b0e9-578a-4f4c-85cc-4094c32a51b7.png#averageHue=%23ecf0ee&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ue0fe3fa5&amp;originHeight=522&amp;originWidth=596&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=uac445fec-d10b-4a8c-a685-4a3cc327c37&amp;title=" alt="" />
+文件的内容将显示在中间的Galaxy面板中，此文件包含来自细菌的 DNA 测序reads，采用 FASTQ 格式：
+<img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510339-2a211148-f359-4ad3-a956-50132a6d6157.png#averageHue=%23e0dddc&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u733bc431&amp;originHeight=425&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u3b1472cf-ffd4-454a-a755-f7597ffaa1d&amp;title=" alt="" /></p>
+<h3 id="使用工具"><strong>使用工具</strong></h3>
+<p>让我们看一下这个文件中的reads质量。</p>
+
+<ol>
+  <li>在工具面板上方的搜索框中输入：<strong>FastQC</strong></li>
+  <li>点击 <strong>FastQC</strong> Read Quality reports</li>
+</ol>
+
+<p>工具将会在中间的Galaxy面板中显示。</p>
+
+<ol>
+  <li>设置以下参数：
+    <ol>
+      <li><em>*Raw read data from your current history **</em>：刚才上传的文件</li>
+      <li>其他参数保持默认</li>
+    </ol>
+  </li>
+  <li>点击 <strong>Run Tool</strong></li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510618-aa917024-f982-4db3-9a28-3ed896cdc3c4.png#averageHue=%23fefefe&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u4c82c569&amp;originHeight=487&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u81167f98-4bce-4bf4-8705-b579936caf3&amp;title=" alt="" />
+工具将会运行，并且两个新的输出数据集将显示在历史面板的顶部。
+<strong>查看结果</strong>
+现在，我们将查看输出的数据集：<strong><em>FastQC on data 1: Webpage</em></strong></p>
+
+<ul>
+  <li>注意：Galaxy会根据其使用的工具名称（FastQC）和输入（data 1）为此数据集命名</li>
+  <li>名称“data 1”表示Galaxy当前历史记录中的数据集编号1（即我们的 FASTQ 文件）</li>
+</ul>
+
+<p>一旦输出数据集的名称变为绿色，有两种方式查看文件的内容：</p>
+
+<ul>
+  <li>如前所述，可以点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463510766-0db22f29-f226-4538-a086-f733f1aaf899.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u6a089b9e&amp;originHeight=16&amp;originWidth=18&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u9c7d2808-6812-4fe6-9a90-04b07497c49&amp;title=" alt="" />图标在线查看</li>
+  <li>也可以点击一下文件名，待展开后点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463510797-36bdbe08-8b8d-4f3e-9df5-53b8f2eef60e.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u98975a14&amp;originHeight=16&amp;originWidth=14&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u6b2a447c-31c2-4c1d-a445-95da1dfaf8f&amp;title=" alt="" />图标下载到本地电脑后查看</li>
+</ul>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510902-1feca4d9-be0e-420f-bad8-16b87ebd8c2c.png#averageHue=%23ebddd6&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u5f893d7c&amp;originHeight=729&amp;originWidth=742&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u96b96d47-635b-4897-893c-2f43b776cc0&amp;title=" alt="" /></p>
+<h2 id="运行其他工具"><strong>运行其他工具</strong></h2>
+<p>让我们运行一个工具来过滤掉 FASTQ 文件中质量较低的 reads。</p>
+
+<ol>
+  <li>在工具面板上方的搜索框中输入：<strong>Filter by quality</strong></li>
+  <li>点击工具 <strong>Filter by quality</strong></li>
+  <li>设置以下参数：
+    <ol>
+      <li><em>*Input FASTQ file **</em>：最初的 FASTQ 文件</li>
+      <li><em>*Quality cut-off value **</em>：35</li>
+      <li><strong>Percent of bases in sequence that must have quality equal to / higher than cut-off value：80</strong></li>
+    </ol>
+  </li>
+  <li>点击 <strong>Run Tool</strong></li>
+</ol>
+
+<p>工具运行后，其输出的数据集将显示在历史面板的顶部。
+<img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463510944-51f41a07-7e2a-4cd7-9a1e-b37589b8e326.png#averageHue=%23cfe8c8&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u47bab2d6&amp;originHeight=756&amp;originWidth=608&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u6eae4d37-7c27-4923-8a21-0cf37cead26&amp;title=" alt="" /></p>
+
+<ul>
+  <li>该数据集的名称为：Filter by quality on data 1</li>
+  <li>历史面板中数据集前面的实际数字并不重要</li>
+</ul>
+
+<p>这个过滤工具的结果是什么？我们可以单击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511071-ba26d3c3-9d86-482c-825a-343f06ad0783.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u5392998f&amp;originHeight=16&amp;originWidth=18&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=udae720ba-4ea0-4c29-b505-cf4c41b7fef&amp;title=" alt="" />图标来查看此输出文件的内容，但信息量不大 - 我们只会看到一个 reads 列表。
+问题：过滤掉了多少 reads？
+答案：1786 (14%)
+<strong>更改设置后重新运行工具</strong>
+现在，我们尝试用更高的标准过滤原始数据，并查看过滤后的结果。</p>
+
+<ol>
+  <li>点击任意一个结果文件名，再点击<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511168-8368f6b3-1f31-4c10-bdd6-c0fe4908e49f.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ue00e8caf&amp;originHeight=16&amp;originWidth=16&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u6932e1f5-261e-4f9e-81ac-606a7aea5f9&amp;title=" alt="" />按钮<strong>（Run Job Again）</strong></li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463511158-84d17fca-e186-4d0a-8278-f503f383081d.png#averageHue=%23c4e3b9&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ufd441a75&amp;originHeight=1428&amp;originWidth=590&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u553876fd-66fc-4b00-bcc2-c293c4f0658&amp;title=" alt="" />
+这将在中央面板中展示工具界面，并且工具的参数设置与刚才生成该数据集的参数是一致的。也就是说，上一次分析的结果很容易重新修改参数后再分析。</p>
+
+<ol>
+  <li>将部分参数修改为更严格，如：
+    <ol>
+      <li><em>*Quality cut-off value **</em>：36</li>
+      <li><strong>Percent of bases in sequence that must have quality equal to / higher than cut-off value *：80</strong></li>
+    </ol>
+  </li>
+  <li>点击 <strong>Run Tool</strong></li>
+</ol>
+
+<p>问题：在这些新的过滤条件下丢弃了多少 reads？
+11517 （92%），大多数 reads 都被过滤了，可见设置的过滤条件过于严格，应该适当放宽一些。
+<strong>分享你的历史记录</strong>
+最后，如果你希望将自己的数据分析过程与他人分享，或者你的分析有问题需要寻求帮助时，可以共享你的历史记录，其他人则可以导入和访问你历史记录中的数据集、参数和步骤。
+单击 <strong>历史面板 **的<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511353-15967aec-7963-4ec0-acf0-b592edcab6e4.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u3e726d66&amp;originHeight=16&amp;originWidth=10&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=ub242151a-d971-403b-9a28-708df101d25&amp;title=" alt="" /></strong>（History options）<strong>，单击 <img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511390-db47ec2b-8c00-44d8-9d8d-18ec2e26bc71.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u55ea805f&amp;originHeight=16&amp;originWidth=14&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u2bd06bad-17a1-4ec4-a8a5-6f07ccf79f3&amp;title=" alt="" /></strong>分享或发布历史，**根据分享范围的不同，有3种方式共享历史：</p>
+
+<ol>
+  <li>共享给特定用户，通过指定用户的邮箱来实现；</li>
+  <li>通过链接共享历史记录。选中 <strong>Make History accessible，</strong>此时会出现一个链接，其他人可以通过该链接访问你的历史。</li>
+  <li>将历史记录共享给本Galaxy平台的所有用户。选中 <strong>Make History publicly available in Published Histories</strong>实现。</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463511523-eb320e75-7002-4d55-90cd-0c67dfba5635.png#averageHue=%23fdfcfc&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ube571d44&amp;originHeight=276&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u14ad4af8-e50c-42e4-99aa-8b29ccda693&amp;title=" alt="" />
+注意：如果你希望共享的历史版本不再改变，可以先将历史记录复制一份，再共享。可以通过历史面板下拉菜单中的 <strong>Copy this History</strong> 复制历史。</p>
+<h3 id="将你的分析历史转变成工作流程"><strong>将你的分析历史转变成工作流程</strong></h3>
+<p>当你仔细查看历史记录时，可以看到它包含了我们分析的所有步骤，从开始（底部）到结束（顶部）。Galaxy的历史面板记录了你运行的每个工具的详细信息，并保留了每个步骤中应用的所有参数设置。但是，当你需要分析数据时，再次逐个执行每个步骤会很乏味。
+Galaxy平台可以将分析过的历史记录转变成流程，通过历史面板<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511536-00b8c817-97ce-48c3-8b03-c76dfb7762e0.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u8057d159&amp;originHeight=16&amp;originWidth=10&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u4cf394ed-a5a1-4da8-af20-fa0865b246e&amp;title=" alt="" /><strong>（History options）</strong>中的 **提取为工作流 **即可以轻松实现。这意味着，每当你要构建工作流程时，只需要手动执行一次步骤，然后将其转换为工作流，这样下次执行相同的分析将大大减少工作量。</p>
+
+<ol>
+  <li>清理历史记录：从历史面板中删除所有失败的任务，通过点击删除按钮。</li>
+  <li>点击历史面板右上角的<strong>（History options），</strong>然后选择 <strong>提取为工作流。</strong></li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463511626-8f8c7bec-6278-48f1-b886-8febb0b5089b.png#averageHue=%23fcfcfc&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ueb915086&amp;originHeight=668&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=ucb52b6be-bf49-4bb8-be8e-e22cfa7e24d&amp;title=" alt="" /></p>
+
+<ol>
+  <li>重命名 **Workflow name **为：QC and filtering</li>
+  <li>重命名右侧输入数据为：FASTQ reads</li>
+  <li>如果某个步骤不需要包含在流程中，可以取消其前面的复选框。在这里，取消第二个 <strong>Filter by quality</strong> 工具的复选框。</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463511720-95bc07db-067c-47a2-8b6a-75cd03d298be.png#averageHue=%23fcfcfc&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ude72e8ce&amp;originHeight=653&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u25b0bf19-3e0d-47e0-a234-a3e24477d63&amp;title=" alt="" /></p>
+
+<ol>
+  <li>点击 <strong>Create Workflow</strong>，将会看到创建成功的消息。</li>
+</ol>
+
+<p>下面，我们将使用刚才创建的工作流程。</p>
+<h3 id="创建新历史记录"><strong>创建新历史记录</strong></h3>
+<p>让我们创建一个新的历史记录。</p>
+
+<ol>
+  <li>点击历史面板上方的加号<img src="https://cdn.nlark.com/yuque/0/2024/svg/38524078/1704463511777-7cade1a7-176f-443e-b414-e660bbef6457.svg#clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u73003089&amp;originHeight=16&amp;originWidth=14&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u11a183da-eace-40bd-8324-602b88b7c74&amp;title=" alt="" /></li>
+  <li>重命名历史：<strong>Run Workflow</strong>
+    <h3 id="在历史之间复制文件"><strong>在历史之间复制文件</strong></h3>
+    <p>历史面板会立即显示新创建的历史，之前的历史记录去哪儿了呢？</p>
+  </li>
+  <li>点击<strong>History options</strong>, 点击 <strong>Show Histories side-by-side</strong></li>
+  <li>复制一个数据集到新的历史中。直接从第1个历史中拖动 FASTQ 文件到新的历史中即可。</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/gif/38524078/1704463511900-f2c3e77a-4fd9-41d4-9fdc-e634776749ad.gif#averageHue=%23f0f1f8&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u5a8f0b25&amp;originHeight=540&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u481c3b8e-4e25-4e9d-86be-fefc56c4744&amp;title=" alt="" /></p>
+<h3 id="在新的历史中运行流程"><strong>在新的历史中运行流程</strong></h3>
+<p>现在我们已经构建了工作流程，它可以用于新的 FASTQ 数据的分析。</p>
+
+<ol>
+  <li>点击Galaxy上方菜单栏中的 <strong>工作流程</strong>。这将会列出你所有的工作流程，新创建的在最上方。</li>
+  <li>点击右侧（Run workflow）按钮。</li>
+  <li><em>*FASTQ reads **</em>：选择FASTQ文件（会默认自动选上）。</li>
+  <li>点击右上角的 <strong>Run Workflow</strong> 按钮。</li>
+</ol>
+
+<p><img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463511980-573f38f2-d604-4c3a-b44a-aef1db44f32e.png#averageHue=%23fdfdfd&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=u5a03ea5b&amp;originHeight=187&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u49fddd18-a472-4a4e-adbd-9fefbbbefe8&amp;title=" alt="" />
+你将看到流程成功调用的消息。所有任务将在新的历史中运行，它将重复最开始历史中的分析步骤。
+<img src="https://cdn.nlark.com/yuque/0/2024/png/38524078/1704463512144-8fc328a4-8199-4089-8158-3f905f23bbd4.png#averageHue=%23e8d4ba&amp;clientId=ub526ca37-98b0-4&amp;from=paste&amp;id=ua31e56a8&amp;originHeight=252&amp;originWidth=1080&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u6b780af5-5204-4b8e-b349-00fbcb56ac1&amp;title=" alt="" />
+<strong>结论</strong>
+至此，你已经入门了Galaxy云平台。掌握了平台的关键操作，如上传文件、命名/新建/分享历史、运行工具、查看/下载分析结果，以及将分析过程提取为工作流以便重复使用。</p>]]></content><author><name></name></author><category term="training" /><summary type="html"><![CDATA[Galaxy是一个在线的生物信息云平台，目前已经上线了1300+生信实用工具，整合的一键式分析流程也在陆续上线中。这些工具/流程涵盖生物信息数据分析的方方面面，包括但不限于：]]></summary></entry><entry><title type="html">上传数据，轻松分析 | 云上转录组标准分析流程使用指南</title><link href="https://usegalaxy.github.io/posts/2023/12/14/tool-update/" rel="alternate" type="text/html" title="上传数据，轻松分析 | 云上转录组标准分析流程使用指南" /><published>2023-12-14T00:00:00+00:00</published><updated>2023-12-14T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/12/14/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/12/14/tool-update/"><![CDATA[<h2 id="工具地址">工具地址</h2>
 
 <p>Galaxy中国（UseGalaxy.cn）&gt; RNA ANALYSIS TOOLS &gt; Standard Analysis &gt; 有参转录组标准分析</p>
 
@@ -1254,311 +1492,4 @@
 
 <p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
 
-<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。]]></summary></entry><entry><title type="html">生物信息必备技能-出版级别的circos圈图绘制</title><link href="https://usegalaxy.github.io/posts/2023/11/06/tool-update/" rel="alternate" type="text/html" title="生物信息必备技能-出版级别的circos圈图绘制" /><published>2023-11-06T00:00:00+00:00</published><updated>2023-11-06T00:00:00+00:00</updated><id>https://usegalaxy.github.io/posts/2023/11/06/tool-update</id><content type="html" xml:base="https://usegalaxy.github.io/posts/2023/11/06/tool-update/"><![CDATA[<p>2023-11-06，Galaxy生信云平台 <a href="https://usegalaxy.cn">UseGalaxy.cn</a> 新增circos圈图绘制工具。</p>
-
-<h2 id="graphdisplay-data">Graph/Display Data</h2>
-
-<ul>
-  <li>Circos visualizes data in a circular layout (Galaxy Version 0.69.8+galaxy12)</li>
-</ul>
-
-<p>Circos（Krzywinski等人，2009年）是一个用于以圆形布局可视化数据的软件包。这使得Circos非常适合探索对象或位置之间的关系。Circos图表已经出现在成千上万的科学出版物中。尽管最初设计用于可视化基因组数据，但它可以根据任何领域的数据创建图表。</p>
-
-<h2 id="文章图形复现">文章图形复现</h2>
-
-<p>图形/数据来源：</p>
-
-<blockquote>
-  <p>Teles Alves I, Hiltemann S, Hartjes T, et al. Gene fusions by chromothripsis of chromosome 5q in the VCaP prostate cancer cell line. Hum Genet. 2013;132(6):709-713. doi:10.1007/s00439-013-1308-1</p>
-</blockquote>
-
-<p><img src="/assets/img/231106-tool-update-circos-target.png" alt="" /></p>
-
-<p>在这篇文章中，各种来源的数据被整合到一个综合的Circos图中。下面我们就来复现这个图，首先我们先了解一下Circos的基础。</p>
-
-<h3 id="1-circos基础">1. Circos基础</h3>
-
-<h4 id="11-外层骨架ideogram">1.1 外层骨架（Ideogram）</h4>
-
-<p>对于基因组数据，通常是染色体，但也可能是物种、基因，或者是另一个分辨率级别，这取决于你想要展示的关系。对于非基因组数据，这可能是人群中的个体、国家，或者是你想用来进行分组的数据的任何其他主要方面。</p>
-
-<h4 id="12-数据轨道data-tracks">1.2 数据轨道（Data Tracks）</h4>
-
-<p>在骨架之内，我们可以绘制数据轨道。有不同类型的图表可用，例如：</p>
-
-<ul>
-  <li>散点图（Scatter plot）</li>
-  <li>线图（Line plot）</li>
-  <li>直方图（Histogram）</li>
-  <li>热图（Heatmap）</li>
-  <li>方块图（Tile）</li>
-  <li>文本（Text）</li>
-  <li>连接（Link）</li>
-  <li>条带（Ribbons）</li>
-</ul>
-
-<p>轨道可以进行很多定制，一些相关的概念包括：</p>
-
-<ul>
-  <li>
-    <p><strong>Radius</strong>：轨道的半径决定了它在中心（0）和表意图（1）之间的位置。</p>
-  </li>
-  <li>
-    <p><strong>Rules</strong>：可以定义规则，根据数据点的值改变数据点的颜色，例如。</p>
-  </li>
-  <li>
-    <p><strong>Axes and backgrounds</strong>：可以在数据轨道上绘制轴和背景。</p>
-  </li>
-</ul>
-
-<h3 id="2-复现步骤">2. 复现步骤</h3>
-
-<p>工具位置：UseGalaxy.cn首页 &gt; Graph/Display Data &gt; Circos visualizes data in a circular layout</p>
-
-<p>或者：<a href="https://usegalaxy.cn/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy12">https://usegalaxy.cn/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy12</a></p>
-
-<h4 id="21-数据准备">2.1 数据准备</h4>
-
-<p>可以下载原文中的数据上传到网站：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/4494146/files/VCaP_Copy-Number.tsv
-https://zenodo.org/record/4494146/files/VCaP_B-allele-Frequency.tsv
-https://zenodo.org/record/4494146/files/VCaP-highConfidenceJunctions.tsv
-https://zenodo.org/record/4494146/files/hg18_karyotype_withbands.txt
-</code></pre></div></div>
-
-<p>或者用网站上整理好的共享数据：</p>
-
-<p>网站首页（UseGalaxy.cn）&gt; 数据共享 &gt; 数据库 &gt; circos，该目录下有4个测试文件：</p>
-
-<ul>
-  <li>hg18_karyotype_withbands.txt，染色体骨架文件</li>
-  <li>circos-sv.tsv，结构变异信息</li>
-  <li>circos-cnv.tsv，拷贝数变异信息</li>
-  <li>circos-baf.tsv，次等位基因频率</li>
-</ul>
-
-<h4 id="22-ideogram">2.2 Ideogram</h4>
-
-<p>由于圈图要呈现的数据很多，参数设置复杂，因此不可能一次就画好，而是有一个不断迭代的过程，一圈一圈地画。</p>
-
-<p><strong>操作：设置Ideogram</strong></p>
-
-<p>我们首先只设置骨架文件，其他参数保持默认：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-1-karyotype.png" alt="" /></p>
-
-<p>运行看看结果：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-result.png" alt="" /></p>
-
-<p>可以看到，只有一个圈。</p>
-
-<p>我们接着设置：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-setting.png" alt="" /></p>
-
-<p>点击“Run Tool”，等待运行结束，点击结果文件右边的铅笔图标，将文件改名为：<strong>Circos Plot ideogram</strong>。</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-1-karyotype-result-ok.png" alt="" /></p>
-
-<p><strong>小知识：</strong></p>
-
-<blockquote>
-  <p>染色体定义的格式如下：chr - ID LABEL START END COLOR</p>
-
-  <p>前两个字段始终是<strong>chr</strong>，表示该行定义了一个染色体，以及 <strong>-</strong>。第二个字段定义了父结构，仅用于染色体条带定义。</p>
-
-  <p><strong>ID</strong> 是数据文件中使用的标识符，而 <strong>LABEL</strong> 是将出现在图像上的骨架旁边的文本。</p>
-
-  <p><strong>START</strong>和<strong>END</strong>定义了染色体的大小。核型文件应该存储整个染色体的大小，而不仅仅是您希望绘制的区域。我们可以使用其他参数仅绘制数据的子集（例如，只有一个染色体）。</p>
-
-  <p><strong>COLOR</strong>参数是可选的，要使用内置的颜色方案，请再次在此列中使用chr1、chr2等。</p>
-</blockquote>
-
-<h4 id="23-数据轨道一结构变异">2.3 数据轨道一：结构变异</h4>
-
-<p>结构变异需要提供两个断点的位置，如下：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chromosome    start    end    chromosome    start    end
-</code></pre></div></div>
-
-<ul>
-  <li>第一个断点的染色体编号，开始位置，结束位置</li>
-  <li>第二个断点的染色体编号，开始位置，结束位置</li>
-</ul>
-
-<p><img src="/assets/img/231106-tool-update-circos-2-sv-data.png" alt="" /></p>
-
-<p><strong>操作：添加结构变异的连线轨道</strong></p>
-
-<ol>
-  <li>
-    <p>点击右侧历史记录中的<strong>Circos Plot ideogram</strong>文件名，点击“Run Job Again”（一个转圈的箭头）</p>
-  </li>
-  <li>
-    <p>结构变异轨道参数设置：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-2-sv-setting.png" alt="" /></p>
-
-<p><img src="/assets/img/231106-tool-update-circos-2-sv-result1.png" alt="" /></p>
-
-<p>可以看到，5号染色体有许多染色体内的结构变异，我们可以单独画出5号染色体的结构变异。</p>
-
-<p>最后， 将结果文件改名为：<strong>Circos Plot SVs</strong></p>
-
-<p><strong>操作：只画5号染色体</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行刚才的工具</p>
-  </li>
-  <li>
-    <p>改变参数设置：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-2-sv-chr5-setting.png" alt="" /></p>
-
-<p>得到如下图片：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-2-sv-chr5.png" alt="" /></p>
-
-<h4 id="24-数据轨道二拷贝数变异">2.4 数据轨道二：拷贝数变异</h4>
-
-<p>拷贝数变异需要准备的数据格式：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr    start    end    value
-</code></pre></div></div>
-<ul>
-  <li>chr，染色体</li>
-  <li>chr，变异开始位置</li>
-  <li>end, 变异结束位置</li>
-  <li>value，变异倍数</li>
-</ul>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-data.png" alt="" /></p>
-
-<p><strong>操作：增加拷贝数轨道</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行画“Circos Plot SVs”的工具。</p>
-  </li>
-  <li>
-    <p>增加一个散点图轨道到图形中：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting.png" alt="" /></p>
-
-<p>结果如下：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result1.png" alt="" /></p>
-
-<p>可以看到，拷贝数轨道与结构变异轨道重叠了。这是因为没有个性结构变异轨道的半径设置：</p>
-
-<ol>
-  <li>重新运行工具，改变以下参数：</li>
-</ol>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In "Link Tracks":
-    - In "1: Link Data":
-        - "Inside Radius": 0.75
-</code></pre></div></div>
-
-<p>应该看到这样的图：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result2.png" alt="" /></p>
-
-<p><strong>操作：用不同颜色标记拷贝数变异状态</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行上一步的结果</p>
-  </li>
-  <li>
-    <p>在<strong>2D data track</strong>的拷贝数轨道中，增加以下规则：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting2.png" alt="" /></p>
-
-<p>应该得到如下结果：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-result3.png" alt="" /></p>
-
-<p><strong>操作：为拷贝数轨道增加坐标轴</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行刚才的结果</p>
-  </li>
-  <li>
-    <p>在<strong>2D data track</strong>中的拷贝数轨道设置页面：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-setting3.png" alt="" /></p>
-
-<p>结果如下：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-3-cnv-final.png" alt="" /></p>
-
-<p>最后， 重命名结果文件为：<strong>Circos Plot CopyNumber</strong></p>
-
-<h4 id="25-数据轨道三次等位基因频率">2.5 数据轨道三：次等位基因频率</h4>
-
-<p>数据格式与拷贝数变异的类似，也是准备4列数据：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chr    start    end    value
-</code></pre></div></div>
-
-<p><strong>操作：增加次等位基因频率到图中</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行刚才的工具（<strong>Circos Plot CopyNumber</strong>）</p>
-  </li>
-  <li>
-    <p>增加新的散点图轨道到图中：</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-4-b-allel-setting.png" alt="" /></p>
-
-<p>最后， 重命名结果文件：<strong>Circos Plot BAF</strong></p>
-
-<p>结果图：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-4-b-allel-result.png" alt="" /></p>
-
-<h4 id="26-存在问题如何将结构变异轨道拆分成两个">2.6 存在问题：如何将结构变异轨道拆分成两个</h4>
-
-<p><strong>操作：两个连接轨道</strong></p>
-
-<ol>
-  <li>
-    <p>重新运行刚才的工具（<strong>Circos Plot BAF</strong>）</p>
-  </li>
-  <li>
-    <p>配置两个单独的连接轨道</p>
-  </li>
-</ol>
-
-<p><img src="/assets/img/231106-tool-update-circos-5-question-setting1.png" alt="" />
-<img src="/assets/img/231106-tool-update-circos-5-question-setting2.png" alt="" /></p>
-
-<p>最后结果：</p>
-
-<p><img src="/assets/img/231106-tool-update-circos-6-recreate-final.png" alt="" /></p>
-
-<p>可以看到，跟原图完全一样，可以说复现效果达到了100%。</p>
-
-<h2 id="友情提示">友情提示</h2>
-
-<p>使用问题请加入<strong>Galaxy中国交流群: 925694514（QQ群，免费加入）</strong>，或者关注公众号：<strong>简说基因</strong>。</p>
-
-<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[2023-11-06，Galaxy生信云平台 UseGalaxy.cn 新增circos圈图绘制工具。]]></summary></entry></feed>
+<p><img src="/assets/media/wechat-qq-group.jpg" alt="" /></p>]]></content><author><name></name></author><category term="tools" /><summary type="html"><![CDATA[文本文件是生物信息学中应用非常广泛的文本格式，甚至可以说是最重要的文件格式，比如常见的测序下机数据Fastq、参考基因组保存格式Fasta、比对文件SAM，以及突变列表VCF，它们都是文本文件。熟练地进行文本文件的处理，对于生信数据分析来说非常重要。比如为特定程序准备相应的输入文件，或者从结果文件中提取需要的信息。]]></summary></entry></feed>
